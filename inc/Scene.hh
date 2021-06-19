@@ -93,5 +93,7 @@ class Scene{
         *   \brief Metoda dodajaca pliki dronow do rysowania na scenie
         */
        void DrawDrone(std::shared_ptr<Drone> Drone);
+
+       bool Check_Landing_Zone();
     
 };

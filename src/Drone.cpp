@@ -94,7 +94,7 @@ bool  Drone::Count_Save_BodyGlCoor(){
       for(unsigned int VertexNumber = 0; VertexNumber < 4; ++VertexNumber){
          tmp = Body.TranformToParentialCoordinate(tmp);
          if(tmp[2] == 0.0 && Radius == 0)
-            Radius = tmp.lenght() + 1;
+            Radius = tmp.lenght() + 5;
          tmp = this->TransformToParentialCoordinate( tmp );
          File_DroneBody << tmp << std::endl;
          File_CuboidTempl >> tmp;
@@ -415,6 +415,35 @@ double Drone::TakeOrient() const{
  */
 const std::string& Drone::TakeFilename_FinalSolid() const{
   return Body.TakeFilename_FinalSolid();
+}
+
+
+
+
+bool  Drone::Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const{
+  std::shared_ptr<Cuboid> tmp;
+  Vector3D V;
+  unsigned int error = 0;
+  if(Obstacle->ObjectType() != "Drone"){
+    tmp = std::dynamic_pointer_cast<Cuboid>(Obstacle);
+    if(tmp->Take_Aprox_Area(2)[0] <= Layout[0] && Layout[0] <= tmp->Take_Aprox_Area(1)[0] && tmp->Take_Aprox_Area(2)[1] <= Layout[1] && Layout[1] <= tmp->Take_Aprox_Area(1)[1])
+      return true;
+    else if(tmp->Take_Aprox_Area(2)[0] - Layout[0] > Radius || Layout[0] - tmp->Take_Aprox_Area(0)[0] > Radius  )
+      return false;
+    else if(tmp->Take_Aprox_Area(0)[1] - Layout[1] > Radius || Layout[1] - tmp->Take_Aprox_Area(1)[1] > Radius)
+      return false;
+    
+    for( unsigned int Ind = 0; Ind < 4; ++Ind){
+      V = tmp->Take_Aprox_Area(Ind) - Layout;
+      if(V.lenght() < Radius)
+        ++error;
+    }
+    
+  }
+  if(!error)
+    return false;
+    
+  return true;
 }
 
 

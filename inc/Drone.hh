@@ -136,6 +136,6 @@ class Drone: public SceneObject{
         */
         virtual const Vector3D& Take() const override {return Layout;};
 
-
+        virtual bool  Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const override;
 
 };

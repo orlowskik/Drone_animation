@@ -70,5 +70,7 @@ class Solid: public SceneObject{
         */
         virtual const Vector3D& Take() const override {return scale;};
 
+        virtual bool  Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const override;
+
 };
 
