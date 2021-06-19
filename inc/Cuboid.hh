@@ -34,6 +34,8 @@ class Cuboid: public Solid{
         */
         double OrientAngle;
 
+        Vector3D Aprox_area[4];
+
     public:
 
         Cuboid();
@@ -57,6 +59,12 @@ class Cuboid: public Solid{
         *   \brief Metoda odpowiadajaca za dostep do orientacji
         */
         double Take_OrientAngle() const {return OrientAngle;};
+
+        Vector3D& Take_Aprox_Area(unsigned int Ind) {return Aprox_area[Ind];};
+
+        const Vector3D Take_Aprox_Area(unsigned int Ind) const {return Aprox_area[Ind];}
+
+        
         /*!
         *   \brief Metoda wirtualna odpowiadajaca za zwracanie typu klasy
         */

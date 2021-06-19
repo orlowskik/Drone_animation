@@ -44,7 +44,7 @@ int main() {
     std::vector<Vector3D>                   TracePoints;
     std::vector<std::shared_ptr<Drone>>     Drones;
     std::list<std::shared_ptr<SceneObject>> Objects;
-
+    std::shared_ptr<Peak>                   P1(new Peak(FILE_OBSTACLE,"../datasets/dat/Peak" + std::to_string(++number_of_peaks) + ".dat",{20,20,60},{130,30,0},0)); 
     Scene Scene(Drones,Objects,SURFACE,Link);
     
 
@@ -56,7 +56,8 @@ int main() {
 
     Scene.AddObject(FirstDrone);
     Scene.AddObject(SecondDrone);
-    Scene.AddObject(std::shared_ptr<Peak>(new Peak(FILE_OBSTACLE,"../datasets/dat/Peak" + std::to_string(++number_of_peaks) + ".dat",{20,20,60},{130,30,0},0) ));
+    Scene.AddObject(P1);
+    //Scene.AddObject(std::shared_ptr<Peak>(new Peak(FILE_OBSTACLE,"../datasets/dat/Peak" + std::to_string(++number_of_peaks) + ".dat",{20,20,60},{0,0,0},0) ));
     Scene.AddObject(std::shared_ptr<Peak>(new Peak(FILE_OBSTACLE,"../datasets/dat/Peak" + std::to_string(++number_of_peaks) + ".dat",{40,40,50},{35,160,0},0) ));
     Scene.AddObject(std::shared_ptr<Slope>(new Slope(FILE_OBSTACLE,"../datasets/dat/Slope" + std::to_string(++number_of_slopes) + ".dat",{20,80,60},{60,90,0},0) ));
     Scene.AddObject(std::shared_ptr<Plateau>(new Plateau(FILE_OBSTACLE,"../datasets/dat/Plateau" + std::to_string(++number_of_plateaus) + ".dat",{50,60,15},{105,105,0},0) ));
@@ -248,9 +249,10 @@ int main() {
         std::cout <<std::endl;
     }
     std::cout << "Koniec dzialania programu Dragonfly\n";
-    std::cout << Scene.UseActiveDrone()->TakeRadius() << std::endl;
 
-
+    for( unsigned int a = 0; a < 4; ++a){
+        std::cout << P1->Take_Aprox_Area(a) << std::endl;
+    }
 
 
 

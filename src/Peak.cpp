@@ -46,6 +46,7 @@ Peak::Peak(std::string File1, std::string File2, const Vector3D &V_scale, const 
  *   \retval false - w przeciwnym wypadku 
  */
 bool Peak::Count_Save_GlobalCoor(){
+    unsigned int number_of_points = 0;
     Vector3D tmp;
     std::ifstream File_Template(this->TakeFilename_TemplateSolid());
     std::ofstream File_Final(this->TakeFilename_FinalSolid()); 
@@ -76,6 +77,10 @@ bool Peak::Count_Save_GlobalCoor(){
                 tmp[1] /= 2;
             }
             tmp = this->TranformToParentialCoordinate(tmp);
+            if(tmp[2] == 0){
+                this->Take_Aprox_Area(number_of_points) = tmp;
+                ++number_of_points;
+            }
             File_Final << tmp <<std::endl;
             File_Template >> tmp;
 

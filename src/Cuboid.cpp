@@ -6,6 +6,9 @@ Cuboid::Cuboid():
     Solid(){
     Layout = {0,0,0};
     OrientAngle = 0;
+    for(unsigned int i = 0; i < 4; ++i){
+        Aprox_area[i] = {0,0,0};
+    };
 }
 
 
