@@ -270,7 +270,7 @@ TEST_CASE("Test konstruktora klasy Drone"){
     unsigned int Errors = 1;
     Vector3D V;
 
-    if(Test.TakeLayout() == V && Test.TakeOrient() == 0 )
+    if(Test.TakeLayout() == V && Test.TakeOrient() == 0 && Test.TakeRadius() == 0)
         --Errors;
 
 
@@ -287,7 +287,7 @@ TEST_CASE("Test tworzenia drona"){
 
     Test.MakeDrone(V_Layout,90,number_of_drones);
 
-    if(Test.TakeLayout() == V && Test.TakeOrient() == 90 )
+    if(Test.TakeLayout() == V && Test.TakeOrient() == 90  && Test.TakeRadius() - 7.4 < 1e-5)
         --Errors;
 
     CHECK(!Errors);
