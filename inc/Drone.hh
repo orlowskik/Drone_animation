@@ -45,6 +45,8 @@ class Drone: public SceneObject{
         *   \brief Kat orientacji
         */
         double   OrientAngle;
+
+        double Radius;
         /*!
         *   \brief Cialo drona jako prostopadloscian
         */
@@ -56,7 +58,7 @@ class Drone: public SceneObject{
         /*!
         *   \brief Prywatna metoda zapisu wspolrzednych ciala
         */
-        bool  Count_Save_BodyGlCoor() const;
+        bool  Count_Save_BodyGlCoor();
         /*!
         *   \brief Prywatna metoda zapisu wspolrzednych rotorow
         */
@@ -121,6 +123,8 @@ class Drone: public SceneObject{
         */
         const Prism& operator [] (unsigned int Ind) const;
 
+        const double& TakeRadius() const {return Radius;};
+
         /*!
         *   \brief Metoda wirtualna odpowiadajaca za zwracanie typu klasy
         */
@@ -131,5 +135,7 @@ class Drone: public SceneObject{
         *   \brief Metoda wirtualna odpowiadajaca za zwracanie wektora polozenia
         */
         virtual const Vector3D& Take() const override {return Layout;};
+
+
 
 };

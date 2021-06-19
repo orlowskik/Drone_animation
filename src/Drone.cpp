@@ -7,6 +7,7 @@ Drone::Drone(){
   
   OrientAngle = 0;
   Layout = {0,0,0};
+  Radius = 0;
   Series = 0;
   Body = Cuboid();
   for(unsigned int Ind = 0; Ind < 4; ++Ind) Rotor[Ind] = Prism();
@@ -68,7 +69,7 @@ void Drone::MakeDrone(const Vector3D &V_l, double angle, unsigned int &number_of
  *   \retval true  - udalo sie zapisac zmiany do plikow
  *   \retval false - w przeciwnym wypadku 
  */
-bool  Drone::Count_Save_BodyGlCoor() const{
+bool  Drone::Count_Save_BodyGlCoor(){
     std::ifstream File_CuboidTempl(Body.TakeFilename_TemplateSolid());
     std::ofstream File_DroneBody(Body.TakeFilename_FinalSolid());
 
@@ -91,7 +92,10 @@ bool  Drone::Count_Save_BodyGlCoor() const{
   while(!File_CuboidTempl.fail()){
 
       for(unsigned int VertexNumber = 0; VertexNumber < 4; ++VertexNumber){
-         tmp = this->TransformToParentialCoordinate( Body.TranformToParentialCoordinate(tmp) );
+         tmp = Body.TranformToParentialCoordinate(tmp);
+         if(tmp[2] == 0.0 && Radius == 0)
+            Radius = tmp.lenght() + 1;
+         tmp = this->TransformToParentialCoordinate( tmp );
          File_DroneBody << tmp << std::endl;
          File_CuboidTempl >> tmp;
 

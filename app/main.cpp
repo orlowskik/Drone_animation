@@ -248,6 +248,7 @@ int main() {
         std::cout <<std::endl;
     }
     std::cout << "Koniec dzialania programu Dragonfly\n";
+    std::cout << Scene.UseActiveDrone()->TakeRadius() << std::endl;
 
 
 
