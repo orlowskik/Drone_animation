@@ -43,6 +43,7 @@ Plateau::Plateau(std::string File1, std::string File2, const Vector3D &V_scale, 
  */
 bool Plateau::Count_Save_GlobalCoor(){
     Vector3D tmp;
+    unsigned int number_of_points = 0;
     std::ifstream File_Template(this->TakeFilename_TemplateSolid());
     std::ofstream File_Final(this->TakeFilename_FinalSolid()); 
 
@@ -65,6 +66,10 @@ bool Plateau::Count_Save_GlobalCoor(){
         
         for(unsigned int VertexNumber = 0; VertexNumber < 4;++VertexNumber){
             tmp = this->TranformToParentialCoordinate(tmp);
+            if(tmp[2] == 0){
+                this->Take_Aprox_Area(number_of_points) = tmp;
+                ++number_of_points;
+            }
             File_Final << tmp <<std::endl;
             File_Template >> tmp;
 
