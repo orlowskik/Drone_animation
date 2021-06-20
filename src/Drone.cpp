@@ -422,6 +422,7 @@ const std::string& Drone::TakeFilename_FinalSolid() const{
 
 bool  Drone::Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const{
   std::shared_ptr<Cuboid> tmp;
+  std::shared_ptr<Drone>  tmp_Drone;
   Vector3D V;
   unsigned int error = 0;
   if(Obstacle->ObjectType() != "Drone"){
@@ -435,16 +436,23 @@ bool  Drone::Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const{
     
     for( unsigned int Ind = 0; Ind < 4; ++Ind){
       V = tmp->Take_Aprox_Area(Ind) - Layout;
+      V[2] = 0;
       if(V.lenght() < Radius)
         ++error;
     }
-    
+    if( (Layout[0] > tmp->Take_Aprox_Area(0)[0]|| Layout[0] < tmp->Take_Aprox_Area(3)[0]) && (Layout[1] < tmp->Take_Aprox_Area(0)[1] || Layout[1] > tmp->Take_Aprox_Area(1)[1])){
+      if(!error)
+        return false;
+    }
   }
-  if( (Layout[0] > tmp->Take_Aprox_Area(0)[0]|| Layout[0] < tmp->Take_Aprox_Area(3)[0]) && (Layout[1] < tmp->Take_Aprox_Area(0)[1] || Layout[1] > tmp->Take_Aprox_Area(1)[1])){
-    if(!error)
+  else{
+    tmp_Drone = std::dynamic_pointer_cast<Drone>(Obstacle);
+    V = tmp_Drone->TakeLayout() - Layout;
+    V[2] = 0;
+    if(tmp_Drone->TakeRadius() + Radius < V.lenght())
       return false;
   }
-    
+
   return true;
 }
 

@@ -1264,3 +1264,142 @@ TEST_CASE("Test wykrywania kolizji - rog (kolizja)"){
 
     CHECK( !Scene.Check_Landing_Zone() );
 }
+
+
+TEST_CASE("Test wykrywania kolizji - dwa drony bez kolizji"){
+    unsigned int number_of_drones = 0;
+    PzG::LaczeDoGNUPlota Link;
+    std::vector<std::shared_ptr<Drone>>     Drones;
+    std::list<std::shared_ptr<SceneObject>> Objects;
+    Scene Scene(Drones,Objects,"../datasets/templates/surface.dat",Link);
+    std::shared_ptr<Drone> TestDrone1(new Drone());
+    std::shared_ptr<Drone> TestDrone2(new Drone());
+
+    TestDrone1->MakeDrone({30,30,0},0,number_of_drones);
+    TestDrone1->Count_Save_GlobalCoor();
+    TestDrone2->MakeDrone({53,30,0},0,number_of_drones);
+    TestDrone2->Count_Save_GlobalCoor();
+    Scene.AddObject(TestDrone1);
+    Scene.AddObject(TestDrone2);
+    
+
+
+    CHECK( Scene.Check_Landing_Zone() );
+}
+
+
+
+
+TEST_CASE("Test wykrywania kolizji - dwa drony na sobie"){
+    unsigned int number_of_drones = 0;
+    PzG::LaczeDoGNUPlota Link;
+    std::vector<std::shared_ptr<Drone>>     Drones;
+    std::list<std::shared_ptr<SceneObject>> Objects;
+    Scene Scene(Drones,Objects,"../datasets/templates/surface.dat",Link);
+    std::shared_ptr<Drone> TestDrone1(new Drone());
+    std::shared_ptr<Drone> TestDrone2(new Drone());
+
+    TestDrone1->MakeDrone({30,30,0},0,number_of_drones);
+    TestDrone1->Count_Save_GlobalCoor();
+    TestDrone2->MakeDrone({30,30,0},0,number_of_drones);
+    TestDrone2->Count_Save_GlobalCoor();
+    Scene.AddObject(TestDrone1);
+    Scene.AddObject(TestDrone2);
+    
+
+
+    CHECK( !Scene.Check_Landing_Zone() );
+}
+
+
+
+TEST_CASE("Test wykrywania kolizji - dwa drony kolizja"){
+    unsigned int number_of_drones = 0;
+    PzG::LaczeDoGNUPlota Link;
+    std::vector<std::shared_ptr<Drone>>     Drones;
+    std::list<std::shared_ptr<SceneObject>> Objects;
+    Scene Scene(Drones,Objects,"../datasets/templates/surface.dat",Link);
+    std::shared_ptr<Drone> TestDrone1(new Drone());
+    std::shared_ptr<Drone> TestDrone2(new Drone());
+
+    TestDrone1->MakeDrone({30,40,0},0,number_of_drones);
+    TestDrone1->Count_Save_GlobalCoor();
+    TestDrone2->MakeDrone({41,51,0},-10,number_of_drones);
+    TestDrone2->Count_Save_GlobalCoor();
+    Scene.AddObject(TestDrone1);
+    Scene.AddObject(TestDrone2);
+    
+
+
+    CHECK( !Scene.Check_Landing_Zone() );
+}
+
+
+
+
+TEST_CASE("Test wykrywania kolizji - dwa drony po przekatnych"){
+    unsigned int number_of_drones = 0;
+    PzG::LaczeDoGNUPlota Link;
+    std::vector<std::shared_ptr<Drone>>     Drones;
+    std::list<std::shared_ptr<SceneObject>> Objects;
+    Scene Scene(Drones,Objects,"../datasets/templates/surface.dat",Link);
+    std::shared_ptr<Drone> TestDrone1(new Drone());
+    std::shared_ptr<Drone> TestDrone2(new Drone());
+
+    TestDrone1->MakeDrone({30,40,0},0,number_of_drones);
+    TestDrone1->Count_Save_GlobalCoor();
+    TestDrone2->MakeDrone({49,19,0},45,number_of_drones);
+    TestDrone2->Count_Save_GlobalCoor();
+    Scene.AddObject(TestDrone1);
+    Scene.AddObject(TestDrone2);
+    
+
+
+    CHECK( Scene.Check_Landing_Zone() );
+}
+
+
+
+TEST_CASE("Test wykrywania kolizji - dwa drony kolizja"){
+    unsigned int number_of_drones = 0;
+    PzG::LaczeDoGNUPlota Link;
+    std::vector<std::shared_ptr<Drone>>     Drones;
+    std::list<std::shared_ptr<SceneObject>> Objects;
+    Scene Scene(Drones,Objects,"../datasets/templates/surface.dat",Link);
+    std::shared_ptr<Drone> TestDrone1(new Drone());
+    std::shared_ptr<Drone> TestDrone2(new Drone());
+
+    TestDrone1->MakeDrone({30,30,0},0,number_of_drones);
+    TestDrone1->Count_Save_GlobalCoor();
+    TestDrone2->MakeDrone({52,30,0},0,number_of_drones);
+    TestDrone2->Count_Save_GlobalCoor();
+    Scene.AddObject(TestDrone1);
+    Scene.AddObject(TestDrone2);
+    
+
+
+    CHECK( !Scene.Check_Landing_Zone() );
+}
+
+
+
+
+TEST_CASE("Test wykrywania kolizji - brak kolizyjnosci ze soba"){
+    unsigned int number_of_drones = 0;
+    PzG::LaczeDoGNUPlota Link;
+    std::vector<std::shared_ptr<Drone>>     Drones;
+    std::list<std::shared_ptr<SceneObject>> Objects;
+    Scene Scene(Drones,Objects,"../datasets/templates/surface.dat",Link);
+    std::shared_ptr<Drone> TestDrone1(new Drone());
+
+    TestDrone1->MakeDrone({30,30,0},0,number_of_drones);
+    TestDrone1->Count_Save_GlobalCoor();
+    Scene.AddObject(TestDrone1);
+
+
+    CHECK( Scene.Check_Landing_Zone() );
+}
+
+
+
+
