@@ -205,7 +205,7 @@ bool Scene::Check_Landing_Zone(){
     for(std::shared_ptr<SceneObject> &i : Objects){
         if(i->ObjectType() != "Drone"){
             if(Drones.at(Active)->Check_Collision(i) ){
-                std::cout << "Wykryto kolizje z :" << i->ObjectType() << std::endl;
+                //std::cout << "Wykryto kolizje z :" << i->ObjectType() << std::endl;
                 return false;
             }
         }

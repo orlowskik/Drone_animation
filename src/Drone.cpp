@@ -440,8 +440,10 @@ bool  Drone::Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const{
     }
     
   }
-  if(!error)
-    return false;
+  if( (Layout[0] > tmp->Take_Aprox_Area(0)[0]|| Layout[0] < tmp->Take_Aprox_Area(3)[0]) && (Layout[1] < tmp->Take_Aprox_Area(0)[1] || Layout[1] > tmp->Take_Aprox_Area(1)[1])){
+    if(!error)
+      return false;
+  }
     
   return true;
 }
