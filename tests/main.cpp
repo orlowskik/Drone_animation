@@ -422,7 +422,7 @@ TEST_CASE("Test wykrywania kolizji - na prawo od gory"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Peak>   P1(new Peak("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({75,50,0},0,number_of_drones);
+    TestDrone->MakeDrone({75,50,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -442,7 +442,7 @@ TEST_CASE("Test wykrywania kolizji - na lewo od gory (kolizja) "){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Peak>   P1(new Peak("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({40,50,0},0,number_of_drones);
+    TestDrone->MakeDrone({40,50,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -461,7 +461,7 @@ TEST_CASE("Test wykrywania kolizji - na prawo od gory (kolizja)"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Peak>   P1(new Peak("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({60,50,0},0,number_of_drones);
+    TestDrone->MakeDrone({60,50,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -480,7 +480,7 @@ TEST_CASE("Test wykrywania kolizji - w srodku gory"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Peak>   P1(new Peak("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({50,50,0},0,number_of_drones);
+    TestDrone->MakeDrone({50,50,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -499,7 +499,7 @@ TEST_CASE("Test wykrywania kolizji - powyzej gory"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Peak>   P1(new Peak("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({50,80,0},0,number_of_drones);
+    TestDrone->MakeDrone({50,80,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -518,7 +518,7 @@ TEST_CASE("Test wykrywania kolizji - ponizej gory"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Peak>   P1(new Peak("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({50,20,0},0,number_of_drones);
+    TestDrone->MakeDrone({50,20,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -537,7 +537,7 @@ TEST_CASE("Test wykrywania kolizji - powyzej gory (kolizja)"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Peak>   P1(new Peak("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({50,65,0},0,number_of_drones);
+    TestDrone->MakeDrone({50,65,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -556,7 +556,7 @@ TEST_CASE("Test wykrywania kolizji - ponizej gory (kolizja)"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Peak>   P1(new Peak("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({50,35,0},0,number_of_drones);
+    TestDrone->MakeDrone({50,35,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -575,7 +575,7 @@ TEST_CASE("Test wykrywania kolizji - lewy gorny rog"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Peak>   P1(new Peak("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({30,70,0},0,number_of_drones);
+    TestDrone->MakeDrone({30,70,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -595,7 +595,7 @@ TEST_CASE("Test wykrywania kolizji - prawy gorny rog"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Peak>   P1(new Peak("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({70,70,0},0,number_of_drones);
+    TestDrone->MakeDrone({70,70,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -614,7 +614,7 @@ TEST_CASE("Test wykrywania kolizji - lewy dolny rog"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Peak>   P1(new Peak("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({30,30,0},0,number_of_drones);
+    TestDrone->MakeDrone({30,30,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -634,7 +634,7 @@ TEST_CASE("Test wykrywania kolizji - prawy dolny rog"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Peak>   P1(new Peak("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({70,30,0},0,number_of_drones);
+    TestDrone->MakeDrone({70,30,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -654,7 +654,7 @@ TEST_CASE("Test wykrywania kolizji - rog (kolizja)"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Peak>   P1(new Peak("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({35,70,0},0,number_of_drones);
+    TestDrone->MakeDrone({35,70,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -674,7 +674,7 @@ TEST_CASE("Test wykrywania kolizji - rog (kolizja)"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Peak>   P1(new Peak("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({65,30,0},0,number_of_drones);
+    TestDrone->MakeDrone({65,30,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -693,7 +693,7 @@ TEST_CASE("Test wykrywania kolizji - na lewo od gory"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({25,30,0},0,number_of_drones);
+    TestDrone->MakeDrone({25,30,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -713,7 +713,7 @@ TEST_CASE("Test wykrywania kolizji - na prawo od gory"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({75,50,0},0,number_of_drones);
+    TestDrone->MakeDrone({75,50,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -733,7 +733,7 @@ TEST_CASE("Test wykrywania kolizji - na lewo od gory (kolizja) "){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({40,50,0},0,number_of_drones);
+    TestDrone->MakeDrone({40,50,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -752,7 +752,7 @@ TEST_CASE("Test wykrywania kolizji - na prawo od gory (kolizja)"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({60,50,0},0,number_of_drones);
+    TestDrone->MakeDrone({60,50,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -771,7 +771,7 @@ TEST_CASE("Test wykrywania kolizji - w srodku gory"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({50,50,0},0,number_of_drones);
+    TestDrone->MakeDrone({50,50,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -790,7 +790,7 @@ TEST_CASE("Test wykrywania kolizji - powyzej gory"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({50,80,0},0,number_of_drones);
+    TestDrone->MakeDrone({50,80,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -809,7 +809,7 @@ TEST_CASE("Test wykrywania kolizji - ponizej gory"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({50,20,0},0,number_of_drones);
+    TestDrone->MakeDrone({50,20,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -828,7 +828,7 @@ TEST_CASE("Test wykrywania kolizji - powyzej gory (kolizja)"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({50,65,0},0,number_of_drones);
+    TestDrone->MakeDrone({50,65,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -847,7 +847,7 @@ TEST_CASE("Test wykrywania kolizji - ponizej gory (kolizja)"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({50,35,0},0,number_of_drones);
+    TestDrone->MakeDrone({50,35,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -866,7 +866,7 @@ TEST_CASE("Test wykrywania kolizji - lewy gorny rog"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({30,70,0},0,number_of_drones);
+    TestDrone->MakeDrone({30,70,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -886,7 +886,7 @@ TEST_CASE("Test wykrywania kolizji - prawy gorny rog"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({70,70,0},0,number_of_drones);
+    TestDrone->MakeDrone({70,70,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -905,7 +905,7 @@ TEST_CASE("Test wykrywania kolizji - lewy dolny rog"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({30,30,0},0,number_of_drones);
+    TestDrone->MakeDrone({30,30,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -925,7 +925,7 @@ TEST_CASE("Test wykrywania kolizji - prawy dolny rog"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({70,30,0},0,number_of_drones);
+    TestDrone->MakeDrone({70,30,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -945,7 +945,7 @@ TEST_CASE("Test wykrywania kolizji - rog (kolizja)"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({35,70,0},0,number_of_drones);
+    TestDrone->MakeDrone({35,70,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -965,7 +965,7 @@ TEST_CASE("Test wykrywania kolizji - rog (kolizja)"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({65,30,0},0,number_of_drones);
+    TestDrone->MakeDrone({65,30,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -984,7 +984,7 @@ TEST_CASE("Test wykrywania kolizji - na lewo od gory"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Plateau>   P1(new Plateau("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({25,30,0},0,number_of_drones);
+    TestDrone->MakeDrone({25,30,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -1004,7 +1004,7 @@ TEST_CASE("Test wykrywania kolizji - na prawo od gory"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Slope>   P1(new Slope("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({75,50,0},0,number_of_drones);
+    TestDrone->MakeDrone({75,50,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -1024,7 +1024,7 @@ TEST_CASE("Test wykrywania kolizji - na lewo od gory (kolizja) "){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Slope>   P1(new Slope("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({40,50,0},0,number_of_drones);
+    TestDrone->MakeDrone({40,50,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -1043,7 +1043,7 @@ TEST_CASE("Test wykrywania kolizji - na prawo od gory (kolizja)"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Slope>   P1(new Slope("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({60,50,0},0,number_of_drones);
+    TestDrone->MakeDrone({60,50,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -1062,7 +1062,7 @@ TEST_CASE("Test wykrywania kolizji - w srodku gory"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Slope>   P1(new Slope("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({50,50,0},0,number_of_drones);
+    TestDrone->MakeDrone({50,50,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -1081,7 +1081,7 @@ TEST_CASE("Test wykrywania kolizji - powyzej gory"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Slope>   P1(new Slope("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({50,80,0},0,number_of_drones);
+    TestDrone->MakeDrone({50,80,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -1100,7 +1100,7 @@ TEST_CASE("Test wykrywania kolizji - ponizej gory"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Slope>   P1(new Slope("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({50,20,0},0,number_of_drones);
+    TestDrone->MakeDrone({50,20,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -1119,7 +1119,7 @@ TEST_CASE("Test wykrywania kolizji - powyzej gory (kolizja)"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Slope>   P1(new Slope("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({50,65,0},0,number_of_drones);
+    TestDrone->MakeDrone({50,65,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -1138,7 +1138,7 @@ TEST_CASE("Test wykrywania kolizji - ponizej gory (kolizja)"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Slope>   P1(new Slope("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({50,35,0},0,number_of_drones);
+    TestDrone->MakeDrone({50,35,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -1157,7 +1157,7 @@ TEST_CASE("Test wykrywania kolizji - lewy gorny rog"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Slope>   P1(new Slope("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({30,70,0},0,number_of_drones);
+    TestDrone->MakeDrone({30,70,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -1177,7 +1177,7 @@ TEST_CASE("Test wykrywania kolizji - prawy gorny rog"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Slope>   P1(new Slope("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({70,70,0},0,number_of_drones);
+    TestDrone->MakeDrone({70,70,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -1196,7 +1196,7 @@ TEST_CASE("Test wykrywania kolizji - lewy dolny rog"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Slope>   P1(new Slope("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({30,30,0},0,number_of_drones);
+    TestDrone->MakeDrone({30,30,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -1216,7 +1216,7 @@ TEST_CASE("Test wykrywania kolizji - prawy dolny rog"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Slope>   P1(new Slope("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({70,30,0},0,number_of_drones);
+    TestDrone->MakeDrone({70,30,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -1236,7 +1236,7 @@ TEST_CASE("Test wykrywania kolizji - rog (kolizja)"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Slope>   P1(new Slope("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({35,70,0},0,number_of_drones);
+    TestDrone->MakeDrone({35,70,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -1256,7 +1256,7 @@ TEST_CASE("Test wykrywania kolizji - rog (kolizja)"){
     std::shared_ptr<Drone> TestDrone(new Drone());
     std::shared_ptr<Slope>   P1(new Slope("../datasets/templates/obstacle.dat","../datasets/dat/test.dat",{20,20,60},{50,50,0},0)); 
 
-    TestDrone->MakeDrone({65,30,0},0,number_of_drones);
+    TestDrone->MakeDrone({65,30,80},0,number_of_drones);
     TestDrone->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone);
     Scene.AddObject(P1);
@@ -1275,7 +1275,7 @@ TEST_CASE("Test wykrywania kolizji - dwa drony bez kolizji"){
     std::shared_ptr<Drone> TestDrone1(new Drone());
     std::shared_ptr<Drone> TestDrone2(new Drone());
 
-    TestDrone1->MakeDrone({30,30,0},0,number_of_drones);
+    TestDrone1->MakeDrone({30,30,80},0,number_of_drones);
     TestDrone1->Count_Save_GlobalCoor();
     TestDrone2->MakeDrone({53,30,0},0,number_of_drones);
     TestDrone2->Count_Save_GlobalCoor();
@@ -1299,7 +1299,7 @@ TEST_CASE("Test wykrywania kolizji - dwa drony na sobie"){
     std::shared_ptr<Drone> TestDrone1(new Drone());
     std::shared_ptr<Drone> TestDrone2(new Drone());
 
-    TestDrone1->MakeDrone({30,30,0},0,number_of_drones);
+    TestDrone1->MakeDrone({30,30,80},0,number_of_drones);
     TestDrone1->Count_Save_GlobalCoor();
     TestDrone2->MakeDrone({30,30,0},0,number_of_drones);
     TestDrone2->Count_Save_GlobalCoor();
@@ -1322,7 +1322,7 @@ TEST_CASE("Test wykrywania kolizji - dwa drony kolizja"){
     std::shared_ptr<Drone> TestDrone1(new Drone());
     std::shared_ptr<Drone> TestDrone2(new Drone());
 
-    TestDrone1->MakeDrone({30,40,0},0,number_of_drones);
+    TestDrone1->MakeDrone({30,40,80},0,number_of_drones);
     TestDrone1->Count_Save_GlobalCoor();
     TestDrone2->MakeDrone({41,51,0},-10,number_of_drones);
     TestDrone2->Count_Save_GlobalCoor();
@@ -1346,7 +1346,7 @@ TEST_CASE("Test wykrywania kolizji - dwa drony po przekatnych"){
     std::shared_ptr<Drone> TestDrone1(new Drone());
     std::shared_ptr<Drone> TestDrone2(new Drone());
 
-    TestDrone1->MakeDrone({30,40,0},0,number_of_drones);
+    TestDrone1->MakeDrone({30,40,80},0,number_of_drones);
     TestDrone1->Count_Save_GlobalCoor();
     TestDrone2->MakeDrone({49,19,0},45,number_of_drones);
     TestDrone2->Count_Save_GlobalCoor();
@@ -1369,7 +1369,7 @@ TEST_CASE("Test wykrywania kolizji - dwa drony kolizja"){
     std::shared_ptr<Drone> TestDrone1(new Drone());
     std::shared_ptr<Drone> TestDrone2(new Drone());
 
-    TestDrone1->MakeDrone({30,30,0},0,number_of_drones);
+    TestDrone1->MakeDrone({30,30,80},0,number_of_drones);
     TestDrone1->Count_Save_GlobalCoor();
     TestDrone2->MakeDrone({52,30,0},0,number_of_drones);
     TestDrone2->Count_Save_GlobalCoor();
@@ -1392,7 +1392,7 @@ TEST_CASE("Test wykrywania kolizji - brak kolizyjnosci ze soba"){
     Scene Scene(Drones,Objects,"../datasets/templates/surface.dat",Link);
     std::shared_ptr<Drone> TestDrone1(new Drone());
 
-    TestDrone1->MakeDrone({30,30,0},0,number_of_drones);
+    TestDrone1->MakeDrone({30,30,80},0,number_of_drones);
     TestDrone1->Count_Save_GlobalCoor();
     Scene.AddObject(TestDrone1);
 
