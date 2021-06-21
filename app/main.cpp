@@ -204,6 +204,7 @@ int main() {
                 std::cout << "d - dodaj element powierzchni\n";
                 std::cout << "u - usun element powierzchni\n";
                 std::cout << "r - obrot po oktagonie\n";
+                std::cout << "t - test\n";
                 std::cout << "m - wyswietl menu\n\n";
                 std::cout << "k - koniec dzialania programu\n\n";
                 std::cout << "Aktualna ilosc obiektow Vector: " << Layout.show_active_vectors() << std::endl;
@@ -238,6 +239,112 @@ int main() {
                 
 
                 if(!Scene.UseActiveDrone()->MakeVerticalFlight(-FLIGHTHEIHGT,Link)) return 1;
+
+                std::cout << "Polozenie Drona aktywnego (x,y): " << Scene.TakeActiveDrone()->TakeLayout()[0] << "  "<<Scene.TakeActiveDrone()->TakeLayout()[1] << std::endl;
+                std::cout << "Aktualna ilosc obiektow Vector: " << Layout.show_active_vectors() << std::endl;
+                std::cout << "  Laczna ilosc obiektow Vector: " << Layout.show_all_vectors() << std::endl << std::endl;
+
+                break;
+            case 't':
+                // 1 Przeszkoda
+                Link.ZmienTrybRys(PzG::TR_3D);
+                Link.Inicjalizuj();
+
+                Link.UstawZakresX(0, 200);
+                Link.UstawZakresY(0, 200);
+                Link.UstawZakresZ(0, 120);
+
+                Link.Rysuj();
+
+                Scene.UseActiveDrone()->MakeTrack(0,100,TracePoints);
+                Link.DodajNazwePliku(FLIGHT_TRACK);
+                Link.Rysuj();
+
+                if(!Scene.UseActiveDrone()->MakeVerticalFlight(FLIGHTHEIHGT,Link)) return 1;
+
+                if(!Scene.UseActiveDrone()->Change_Orientation(0,Link)) return 1;
+
+                if(!Scene.UseActiveDrone()->MakeHorizontalFlight(100,Link)) return 1;
+
+                while(!Scene.Check_Landing_Zone()){
+                    usleep(1000000);
+                    TracePoints.pop_back();
+                    Scene.UseActiveDrone()->MakeTrack(0,20,TracePoints);
+                    if(!Scene.UseActiveDrone()->MakeHorizontalFlight(20,Link)) return 1;
+                }
+
+                if(!Scene.UseActiveDrone()->MakeVerticalFlight(-FLIGHTHEIHGT,Link)) return 1;
+
+                TracePoints.clear();
+
+                Link.UsunOstatniaNazwe();
+                Link.Rysuj();
+                // 2 Przeszkoda
+                Link.ZmienTrybRys(PzG::TR_3D);
+                Link.Inicjalizuj();
+
+                Link.UstawZakresX(0, 200);
+                Link.UstawZakresY(0, 200);
+                Link.UstawZakresZ(0, 120);
+
+                Link.Rysuj();
+
+                Scene.UseActiveDrone()->MakeTrack(90,80,TracePoints);
+                Link.DodajNazwePliku(FLIGHT_TRACK);
+                Link.Rysuj();
+
+                if(!Scene.UseActiveDrone()->MakeVerticalFlight(FLIGHTHEIHGT,Link)) return 1;
+
+                if(!Scene.UseActiveDrone()->Change_Orientation(90,Link)) return 1;
+
+                if(!Scene.UseActiveDrone()->MakeHorizontalFlight(80,Link)) return 1;
+
+                while(!Scene.Check_Landing_Zone()){
+                    usleep(1000000);
+                    TracePoints.pop_back();
+                    Scene.UseActiveDrone()->MakeTrack(0,20,TracePoints);
+                    if(!Scene.UseActiveDrone()->MakeHorizontalFlight(20,Link)) return 1;
+                }
+
+                if(!Scene.UseActiveDrone()->MakeVerticalFlight(-FLIGHTHEIHGT,Link)) return 1;
+
+                TracePoints.clear();
+
+                Link.UsunOstatniaNazwe();
+                Link.Rysuj();
+                // 3 i 4 Przeszkoda
+                Link.ZmienTrybRys(PzG::TR_3D);
+                Link.Inicjalizuj();
+
+                Link.UstawZakresX(0, 200);
+                Link.UstawZakresY(0, 200);
+                Link.UstawZakresZ(0, 120);
+
+                Link.Rysuj();
+
+                Scene.UseActiveDrone()->MakeTrack(125,85,TracePoints);
+                Link.DodajNazwePliku(FLIGHT_TRACK);
+                Link.Rysuj();
+
+                if(!Scene.UseActiveDrone()->MakeVerticalFlight(FLIGHTHEIHGT,Link)) return 1;
+
+                if(!Scene.UseActiveDrone()->Change_Orientation(125,Link)) return 1;
+
+                if(!Scene.UseActiveDrone()->MakeHorizontalFlight(85,Link)) return 1;
+
+                while(!Scene.Check_Landing_Zone()){
+                    usleep(1000000);
+                    TracePoints.pop_back();
+                    Scene.UseActiveDrone()->MakeTrack(0,20,TracePoints);
+                    if(!Scene.UseActiveDrone()->MakeHorizontalFlight(20,Link)) return 1;
+                }
+
+                if(!Scene.UseActiveDrone()->MakeVerticalFlight(-FLIGHTHEIHGT,Link)) return 1;
+
+                TracePoints.clear();
+
+                Link.UsunOstatniaNazwe();
+                Link.Rysuj();
 
                 std::cout << "Polozenie Drona aktywnego (x,y): " << Scene.TakeActiveDrone()->TakeLayout()[0] << "  "<<Scene.TakeActiveDrone()->TakeLayout()[1] << std::endl;
                 std::cout << "Aktualna ilosc obiektow Vector: " << Layout.show_active_vectors() << std::endl;
