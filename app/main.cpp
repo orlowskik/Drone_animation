@@ -88,32 +88,8 @@ int main() {
                 std::cin >> Angle;
                 std::cout << "Podaj dlugosc lotu > ";
                 std::cin >> FlightLen;
-                std::cin.ignore(10000,'\n');
-
-                Link.ZmienTrybRys(PzG::TR_3D);
-                Link.Inicjalizuj();
-
-                Link.UstawZakresX(0, 200);
-                Link.UstawZakresY(0, 200);
-                Link.UstawZakresZ(0, 120);
-
-                Link.Rysuj();
-
-
-                Scene.UseActiveDrone()->MakeTrack(Angle,FlightLen,TracePoints);
-                Link.DodajNazwePliku(FLIGHT_TRACK);
-                Link.Rysuj();
-
-                if(!Scene.UseActiveDrone()->MakeVerticalFlight(FLIGHTHEIHGT,Link)) return 1;
-
-                if(!Scene.UseActiveDrone()->Change_Orientation(Angle,Link)) return 1;
-
-                if(!Scene.UseActiveDrone()->MakeHorizontalFlight(FlightLen,Link)) return 1;
-
-                if(!Scene.UseActiveDrone()->MakeVerticalFlight(-FLIGHTHEIHGT,Link)) return 1;
-
-                Link.UsunOstatniaNazwe();
-                Link.Rysuj();
+                //std::cin.ignore(10000,'\n');
+                if(!Scene.Fly(Angle,FlightLen,FLIGHTHEIHGT,TracePoints)) exit(1);
                 
                 std::cout << std::endl;
                 
@@ -162,7 +138,7 @@ int main() {
                 std::cout << "  Laczna ilosc obiektow Vector: " << Layout.show_all_vectors() << std::endl << std::endl;
 
                 Link.Rysuj();
-                std::cin.ignore(10000,'\n');
+                //std::cin.ignore(10000,'\n');
                 break;
             case 'u':
                 std::cout << "Wybierz element powierzchni do usuniecia:\n";
@@ -183,7 +159,7 @@ int main() {
                 }
                 Scene.Redraw();
                 Link.Rysuj();
-                std::cin.ignore(10000,'\n');
+                //std::cin.ignore(10000,'\n');
 
                 std::cout << "Polozenie Drona aktywnego (x,y): " << Scene.TakeActiveDrone()->TakeLayout()[0] << "  "<<Scene.TakeActiveDrone()->TakeLayout()[1] << std::endl;
                 std::cout << "Aktualna ilosc obiektow Vector: " << Layout.show_active_vectors() << std::endl;
@@ -215,7 +191,7 @@ int main() {
                 Link.UstawRotacjeXZ(64,65);
 
                 Link.Rysuj();
-                std::cin.ignore(10000,'\n');
+                //std::cin.ignore(10000,'\n');
 
                 if(!Scene.UseActiveDrone()->MakeVerticalFlight(FLIGHTHEIHGT,Link)) return 1;
 

@@ -212,3 +212,33 @@ bool Scene::Check_Landing_Zone(){
     }
     return true;
 }
+
+
+bool Scene::Fly(double Angle, double FlightLen, double FlightHeight, std::vector<Vector3D>& TracePoints){
+    Link.ZmienTrybRys(PzG::TR_3D);
+    Link.Inicjalizuj();
+
+    Link.UstawZakresX(0, 200);
+    Link.UstawZakresY(0, 200);
+    Link.UstawZakresZ(0, 120);
+
+    Link.Rysuj();
+
+    UseActiveDrone()->MakeTrack(Angle,FlightLen,TracePoints);
+    Link.DodajNazwePliku(FLIGHT_TRACK);
+    Link.Rysuj();
+
+    if(!UseActiveDrone()->MakeVerticalFlight(FlightHeight,Link)) return false;
+
+    if(!UseActiveDrone()->Change_Orientation(Angle,Link)) return false;
+
+    if(!UseActiveDrone()->MakeHorizontalFlight(FlightLen,Link)) return false;
+
+    if(!UseActiveDrone()->MakeVerticalFlight(-FlightHeight,Link)) return false;
+
+    Link.UsunOstatniaNazwe();
+    Link.Rysuj();
+
+    return true;
+
+}
