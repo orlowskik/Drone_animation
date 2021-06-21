@@ -314,7 +314,7 @@ void Drone::MakeTrack(double rotation_angle, double FlightLen, std::vector<Vecto
   double FlightHeight = 80;
   Vector3D tmp = {Layout[0],Layout[1],Layout[2]};
 
-  TracePoints.clear();
+  //TracePoints.clear();
   
   if(OutFile.is_open())
     OutFile.close();
@@ -348,7 +348,7 @@ void Drone::MakeTrack(double rotation_angle, double FlightLen, std::vector<Vecto
 
 
   OutFile.close();
-  TracePoints.clear();
+  //TracePoints.clear();
 
 
 }

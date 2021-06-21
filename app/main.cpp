@@ -89,7 +89,31 @@ int main() {
                 std::cout << "Podaj dlugosc lotu > ";
                 std::cin >> FlightLen;
                 //std::cin.ignore(10000,'\n');
-                if(!Scene.Fly(Angle,FlightLen,FLIGHTHEIHGT,TracePoints)) exit(1);
+                Link.ZmienTrybRys(PzG::TR_3D);
+                Link.Inicjalizuj();
+
+                Link.UstawZakresX(0, 200);
+                Link.UstawZakresY(0, 200);
+                Link.UstawZakresZ(0, 120);
+
+                Link.Rysuj();
+
+                Scene.UseActiveDrone()->MakeTrack(Angle,FlightLen,TracePoints);
+                Link.DodajNazwePliku(FLIGHT_TRACK);
+                Link.Rysuj();
+
+                if(!Scene.UseActiveDrone()->MakeVerticalFlight(FLIGHTHEIHGT,Link)) return 1;
+
+                if(!Scene.UseActiveDrone()->Change_Orientation(Angle,Link)) return 1;
+
+                if(!Scene.UseActiveDrone()->MakeHorizontalFlight(FlightLen,Link)) return 1;
+
+                if(!Scene.UseActiveDrone()->MakeVerticalFlight(-FLIGHTHEIHGT,Link)) return 1;
+
+                TracePoints.clear();
+
+                Link.UsunOstatniaNazwe();
+                Link.Rysuj();
                 
                 std::cout << std::endl;
                 
