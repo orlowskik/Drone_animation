@@ -328,9 +328,10 @@ void Drone::MakeTrack(double rotation_angle, double FlightLen, std::vector<Vecto
 	 << std::endl;
   }
 
-  TracePoints.push_back(tmp);
-  tmp[2] += FlightHeight;
-  
+  if(tmp[2] == 0){
+    TracePoints.push_back(tmp);
+    tmp[2] += FlightHeight;
+  }
   TracePoints.push_back(tmp);
 
   Vector3D Destination = {cos(rotation_angle*M_PI/180),sin(rotation_angle*M_PI/180),0};

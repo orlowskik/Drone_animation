@@ -88,7 +88,6 @@ int main() {
                 std::cin >> Angle;
                 std::cout << "Podaj dlugosc lotu > ";
                 std::cin >> FlightLen;
-                //std::cin.ignore(10000,'\n');
                 Link.ZmienTrybRys(PzG::TR_3D);
                 Link.Inicjalizuj();
 
@@ -107,6 +106,13 @@ int main() {
                 if(!Scene.UseActiveDrone()->Change_Orientation(Angle,Link)) return 1;
 
                 if(!Scene.UseActiveDrone()->MakeHorizontalFlight(FlightLen,Link)) return 1;
+
+                while(!Scene.Check_Landing_Zone()){
+                    usleep(1000000);
+                    TracePoints.pop_back();
+                    Scene.UseActiveDrone()->MakeTrack(0,20,TracePoints);
+                    if(!Scene.UseActiveDrone()->MakeHorizontalFlight(20,Link)) return 1;
+                }
 
                 if(!Scene.UseActiveDrone()->MakeVerticalFlight(-FLIGHTHEIHGT,Link)) return 1;
 

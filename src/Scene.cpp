@@ -205,7 +205,9 @@ bool Scene::Check_Landing_Zone(){
     for(std::shared_ptr<SceneObject> &i : Objects){
         if(i != Drones.at(Active)){
             if(Drones.at(Active)->Check_Collision(i) ){
+                std::cout << "Ladowisko niedostepne!" << std::endl;
                 std::cout << "Wykryto kolizje z :" << i->ObjectType() << std::endl;
+                std::cout << "Lot wydluzony. Szukam innego lodowiska." << std::endl;
                 return false;
             }
         }
