@@ -58,7 +58,7 @@ int main() {
     Scene.AddObject(std::shared_ptr<Peak>(new Peak(FILE_OBSTACLE,"../datasets/dat/Peak" + std::to_string(++number_of_peaks) + ".dat",{20,20,60},{150,30,0},0) ));
     Scene.AddObject(std::shared_ptr<Peak>(new Peak(FILE_OBSTACLE,"../datasets/dat/Peak" + std::to_string(++number_of_peaks) + ".dat",{40,40,50},{35,160,0},0) ));
     Scene.AddObject(std::shared_ptr<Slope>(new Slope(FILE_OBSTACLE,"../datasets/dat/Slope" + std::to_string(++number_of_slopes) + ".dat",{20,80,60},{60,90,0},0) ));
-    Scene.AddObject(std::shared_ptr<Plateau>(new Plateau(FILE_OBSTACLE,"../datasets/dat/Plateau" + std::to_string(++number_of_plateaus) + ".dat",{50,60,15},{105,105,0},0) ));
+    Scene.AddObject(std::shared_ptr<Plateau>(new Plateau(FILE_OBSTACLE,"../datasets/dat/Plateau" + std::to_string(++number_of_plateaus) + ".dat",{50,60,35},{105,105,0},0) ));
     Scene.Redraw();
 
     while(option[0] != 'k'){
@@ -183,6 +183,7 @@ int main() {
                 
                 // Ladowanie na plaskowyzu
                 Scene.Fly(110,85,FLIGHTHEIHGT,TracePoints);
+                usleep(100000);
 
                 // 3 Przeszkoda
                 Scene.Fly(0,50,80,TracePoints); 

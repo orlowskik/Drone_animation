@@ -4441,15 +4441,12 @@ TEST CASE:  Test wykrywania kolizji - ponizej gory (kolizja)
 
 
 
-Ladowisko niedostepne!
-Wykryto kolizje z :Plaskowyz
-Lot wydluzony. Szukam innego lodowiska.
 ===============================================================================
 /home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/tests/main.cpp:860:
 TEST CASE:  Test wykrywania kolizji - lewy gorny rog
 
-/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/tests/main.cpp:875: ERROR: CHECK( !Scene.Check_Landing_Zone() ) is NOT correct!
-  values: CHECK( false )
+/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/tests/main.cpp:875: SUCCESS: CHECK( !Scene.Check_Landing_Zone() ) is correct!
+  values: CHECK( true )
 
 
 
@@ -4609,15 +4606,12 @@ TEST CASE:  Test wykrywania kolizji - lewy gorny rog
 
 
 
-Ladowisko niedostepne!
-Wykryto kolizje z :Plaskowyz
-Lot wydluzony. Szukam innego lodowiska.
 ===============================================================================
 /home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/tests/main.cpp:880:
 TEST CASE:  Test wykrywania kolizji - prawy gorny rog
 
-/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/tests/main.cpp:895: ERROR: CHECK( !Scene.Check_Landing_Zone() ) is NOT correct!
-  values: CHECK( false )
+/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/tests/main.cpp:895: SUCCESS: CHECK( !Scene.Check_Landing_Zone() ) is correct!
+  values: CHECK( true )
 
 
 
@@ -4777,15 +4771,12 @@ TEST CASE:  Test wykrywania kolizji - prawy gorny rog
 
 
 
-Ladowisko niedostepne!
-Wykryto kolizje z :Plaskowyz
-Lot wydluzony. Szukam innego lodowiska.
 ===============================================================================
 /home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/tests/main.cpp:899:
 TEST CASE:  Test wykrywania kolizji - lewy dolny rog
 
-/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/tests/main.cpp:914: ERROR: CHECK( !Scene.Check_Landing_Zone() ) is NOT correct!
-  values: CHECK( false )
+/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/tests/main.cpp:914: SUCCESS: CHECK( !Scene.Check_Landing_Zone() ) is correct!
+  values: CHECK( true )
 
 
 
@@ -4945,15 +4936,12 @@ TEST CASE:  Test wykrywania kolizji - lewy dolny rog
 
 
 
-Ladowisko niedostepne!
-Wykryto kolizje z :Plaskowyz
-Lot wydluzony. Szukam innego lodowiska.
 ===============================================================================
 /home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/tests/main.cpp:919:
 TEST CASE:  Test wykrywania kolizji - prawy dolny rog
 
-/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/tests/main.cpp:934: ERROR: CHECK( !Scene.Check_Landing_Zone() ) is NOT correct!
-  values: CHECK( false )
+/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/tests/main.cpp:934: SUCCESS: CHECK( !Scene.Check_Landing_Zone() ) is correct!
+  values: CHECK( true )
 
 
 
@@ -9346,6 +9334,6 @@ TEST CASE:  Test wykrywania kolizji - brak kolizyjnosci ze soba
   values: CHECK( true )
 
 ===============================================================================
-[doctest] test cases: 92 | 88 passed | 4 failed | 0 skipped
-[doctest] assertions: 92 | 88 passed | 4 failed |
-[doctest] Status: FAILURE!
+[doctest] test cases: 92 | 92 passed | 0 failed | 0 skipped
+[doctest] assertions: 92 | 92 passed | 0 failed |
+[doctest] Status: SUCCESS!
