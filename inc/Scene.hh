@@ -95,5 +95,9 @@ class Scene{
        void DrawDrone(std::shared_ptr<Drone> Drone);
 
        bool Check_Landing_Zone();
+
+       bool Fly(double Angle, double FlightLen, double FlightHeight, std::vector<Vector3D>& TracePoints);
+
+       bool Hex();
     
 };

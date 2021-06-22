@@ -196,6 +196,16 @@ void Scene::Redraw(){
         }
     }
 
+    Link.ZmienTrybRys(PzG::TR_3D);
+    Link.Inicjalizuj();
+
+    Link.UstawZakresX(0, 200);
+    Link.UstawZakresY(0, 200);
+    Link.UstawZakresZ(0, 120);
+    Link.UstawRotacjeXZ(64,65);
+
+    Link.Rysuj();
+
 }
 
 
@@ -213,4 +223,79 @@ bool Scene::Check_Landing_Zone(){
         }
     }
     return true;
+}
+
+
+
+
+bool Scene::Fly(double Angle, double FlightLen, double FlightHeight, std::vector<Vector3D>& TracePoints){
+    Link.ZmienTrybRys(PzG::TR_3D);
+    Link.Inicjalizuj();
+
+    Link.UstawZakresX(0, 200);
+    Link.UstawZakresY(0, 200);
+    Link.UstawZakresZ(0, 120);
+
+    Link.Rysuj();
+
+    UseActiveDrone()->MakeTrack(Angle,FlightLen,TracePoints);
+    Link.DodajNazwePliku(FLIGHT_TRACK);
+    Link.Rysuj();
+
+    if(!UseActiveDrone()->MakeVerticalFlight(FlightHeight,Link)) return false;
+
+    if(!UseActiveDrone()->Change_Orientation(Angle,Link)) return false;
+
+    if(!UseActiveDrone()->MakeHorizontalFlight(FlightLen,Link)) return false;
+
+    while(!Check_Landing_Zone()){
+        usleep(1000000);
+        TracePoints.pop_back();
+        UseActiveDrone()->MakeTrack(0,20,TracePoints);
+        if(!UseActiveDrone()->MakeHorizontalFlight(20,Link)) return 1;
+    }
+
+    if(!UseActiveDrone()->MakeVerticalFlight(-FlightHeight,Link)) return false;
+
+    TracePoints.clear();
+
+    Link.UsunOstatniaNazwe();
+    Link.Rysuj();
+
+    return true;
+}
+
+
+
+bool Scene::Hex(){
+    Link.ZmienTrybRys(PzG::TR_3D);
+    Link.Inicjalizuj();
+
+    Link.UstawZakresX(0, 200);
+    Link.UstawZakresY(0, 200);
+    Link.UstawZakresZ(0, 120);
+
+
+    Link.UstawRotacjeXZ(64,65);
+                
+    Link.Rysuj();
+
+    if(!UseActiveDrone()->MakeVerticalFlight(80,Link)) return false;
+
+    if(!UseActiveDrone()->MakeHorizontalFlight(10,Link)) return false;
+
+    if(!UseActiveDrone()->Change_Orientation(112.5,Link)) return false;
+
+    for (unsigned int i = 0; i < 8; ++i){
+        if(!UseActiveDrone()->MakeHorizontalFlight(10,Link)) return false;
+        if(!UseActiveDrone()->Change_Orientation(45,Link)) return false;
+    }
+    if(!UseActiveDrone()->Change_Orientation(67.5,Link)) return false;
+    if(!UseActiveDrone()->MakeHorizontalFlight(10,Link)) return false;
+                
+
+    if(!UseActiveDrone()->MakeVerticalFlight(-80,Link)) return false;
+
+    return true;
+
 }
