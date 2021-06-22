@@ -420,7 +420,15 @@ const std::string& Drone::TakeFilename_FinalSolid() const{
 
 
 
-
+/*!
+ *   \brief Metoda sprawdzajaca kolizje
+ *  
+ *   
+ *   \param [in]  Obstacle - wskaznik wspoldzielony na obiekt sceny, z ktorym badana jest kolizyjnosc
+ *
+ *   \retval true  - wykryto kolizje
+ *   \retval false - w przeciwnym wypadku 
+ */
 bool  Drone::Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const{
   std::shared_ptr<Cuboid> tmp;
   std::shared_ptr<Drone>  tmp_Drone;

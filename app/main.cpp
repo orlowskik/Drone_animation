@@ -167,7 +167,7 @@ int main() {
                 break;
             case 'r':
                 
-                if(!Scene.Hex()) exit(1);
+                if(!Scene.Oct()) exit(1);
 
                 std::cout << "Polozenie Drona aktywnego (x,y): " << Scene.TakeActiveDrone()->TakeLayout()[0] << "  "<<Scene.TakeActiveDrone()->TakeLayout()[1] << std::endl;
                 std::cout << "Aktualna ilosc obiektow Vector: " << Layout.show_active_vectors() << std::endl;

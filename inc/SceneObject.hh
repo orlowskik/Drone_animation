@@ -17,7 +17,9 @@ class SceneObject{
         *   \brief Metoda wirtualna zwracajaca wektor polozenia
         */
         virtual const Vector3D& Take() const = 0;
-
+        /*!
+        *   \brief Metoda wirtualna badania kolizyjnosci
+        */
         virtual bool  Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const = 0;
 
 };

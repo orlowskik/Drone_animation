@@ -93,11 +93,17 @@ class Scene{
         *   \brief Metoda dodajaca pliki dronow do rysowania na scenie
         */
        void DrawDrone(std::shared_ptr<Drone> Drone);
-
+       /*!
+        *   \brief Metoda sprawdzajaca mozliwosc ladowania
+        */
        bool Check_Landing_Zone();
-
+       /*!
+        *   \brief Metoda lotu
+        */
        bool Fly(double Angle, double FlightLen, double FlightHeight, std::vector<Vector3D>& TracePoints);
-
-       bool Hex();
+        /*!
+        *   \brief Metoda lotu po oktagonie
+        */
+       bool Oct();
     
 };

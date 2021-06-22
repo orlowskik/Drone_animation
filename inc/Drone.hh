@@ -135,7 +135,9 @@ class Drone: public SceneObject{
         *   \brief Metoda wirtualna odpowiadajaca za zwracanie wektora polozenia
         */
         virtual const Vector3D& Take() const override {return Layout;};
-
+        /*!
+        *   \brief Metoda wirtualna odpowiadajaca za sprawdzanie kolizji
+        */
         virtual bool  Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const override;
 
 };

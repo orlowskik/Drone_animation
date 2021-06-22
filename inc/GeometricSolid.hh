@@ -69,7 +69,9 @@ class Solid: public SceneObject{
         *   \brief Metoda wirtualna odpowiadajaca za zwracanie wektora skalowania
         */
         virtual const Vector3D& Take() const override {return scale;};
-
+        /*!
+        *   \brief Metoda wirtualna badajaca kolizyjnosc
+        */
         virtual bool  Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const override;
 
 };

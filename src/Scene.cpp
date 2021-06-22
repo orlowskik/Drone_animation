@@ -210,7 +210,12 @@ void Scene::Redraw(){
 
 
 
-
+/*!
+ *   \brief Sprawdzajaca mozliwosc ladowaniadrona
+ * 
+ *   \retval true  - mozna ladowac 
+ *   \retval false - w przeciwnym wypadku 
+ */
 bool Scene::Check_Landing_Zone(){
     for(std::shared_ptr<SceneObject> &i : Objects){
         if(i != Drones.at(Active)){
@@ -227,7 +232,17 @@ bool Scene::Check_Landing_Zone(){
 
 
 
-
+/*!
+ *   \brief Metoda lotu wybranym dronem
+ *
+ *   \param [in] Angle         - kat lotu
+ *   \param [in] FlightLen     - dlugosc lotu
+ *   \param [in] FlightHeight  - wysokosc lotu
+ *   \param [in] TracePoints   - wektory do rysowania trasy przelotu
+ * 
+ *   \retval true  - udalo sie wykonac lot
+ *   \retval false - w przeciwnym wypadku 
+ */
 bool Scene::Fly(double Angle, double FlightLen, double FlightHeight, std::vector<Vector3D>& TracePoints){
     Link.ZmienTrybRys(PzG::TR_3D);
     Link.Inicjalizuj();
@@ -266,8 +281,13 @@ bool Scene::Fly(double Angle, double FlightLen, double FlightHeight, std::vector
 }
 
 
-
-bool Scene::Hex(){
+/*!
+ *   \brief Metoda lotu po oktagonie
+ * 
+ *   \retval true  - wykonano lot
+ *   \retval false - w przeciwnym wypadku 
+ */
+bool Scene::Oct(){
     Link.ZmienTrybRys(PzG::TR_3D);
     Link.Inicjalizuj();
 

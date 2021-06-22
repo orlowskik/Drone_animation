@@ -39,7 +39,6 @@ Solid::Solid(std::string FirstFile,std::string SecFile, const Vector3D &V_scale)
 }
 
 
-
 bool  Solid::Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const{
     if(Obstacle->ObjectType() != "Drone"){
         return true;
