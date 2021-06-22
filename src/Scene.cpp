@@ -213,21 +213,26 @@ void Scene::Redraw(){
 /*!
  *   \brief Sprawdzajaca mozliwosc ladowaniadrona
  * 
- *   \retval true  - mozna ladowac 
- *   \retval false - w przeciwnym wypadku 
+ *   \retval  0  - mozna ladowac 
+ *   \retval -1  - nie mozna ladowac
+ *   \retval >0  - mozna lodawac na podanej wysokosci(Plaskowyz) 
  */
-bool Scene::Check_Landing_Zone(){
+double Scene::Check_Landing_Zone(){
+    double tmp;
     for(std::shared_ptr<SceneObject> &i : Objects){
         if(i != Drones.at(Active)){
-            if(Drones.at(Active)->Check_Collision(i) ){
+            tmp = Drones.at(Active)->Check_Collision(i);
+            if(tmp < 0){
                 std::cout << "Ladowisko niedostepne!" << std::endl;
                 std::cout << "Wykryto kolizje z :" << i->ObjectType() << std::endl;
                 std::cout << "Lot wydluzony. Szukam innego lodowiska." << std::endl;
-                return false;
+                return -1;
             }
+            else if(tmp > 0)
+                return tmp;
         }
     }
-    return true;
+    return 0;
 }
 
 
@@ -263,13 +268,13 @@ bool Scene::Fly(double Angle, double FlightLen, double FlightHeight, std::vector
 
     if(!UseActiveDrone()->MakeHorizontalFlight(FlightLen,Link)) return false;
 
-    while(!Check_Landing_Zone()){
+    while(Check_Landing_Zone() < 0){
         usleep(1000000);
         TracePoints.pop_back();
         UseActiveDrone()->MakeTrack(0,20,TracePoints);
-        if(!UseActiveDrone()->MakeHorizontalFlight(20,Link)) return 1;
+        if(!UseActiveDrone()->MakeHorizontalFlight(20,Link)) return false;
     }
-
+    FlightHeight -= Check_Landing_Zone();
     if(!UseActiveDrone()->MakeVerticalFlight(-FlightHeight,Link)) return false;
 
     TracePoints.clear();

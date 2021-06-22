@@ -240,9 +240,9 @@ bool Drone::MakeHorizontalFlight(double FlightLen, PzG::LaczeDoGNUPlota& Link){
  *   \retval false - w przeciwnym wypadku 
  */
 bool Drone::MakeVerticalFlight(double FlightLen, PzG::LaczeDoGNUPlota& Link){
-    FlightLen = FlightLen + Layout[2];
+    
     if(FlightLen > 0 ){
-      std::cout << "Wznoszenie ... " << std::endl;
+      //std::cout << "Wznoszenie ... " << std::endl;
       for(;Layout[2] <= FlightLen ; Layout[2] += 2){
           if(!this->Count_Save_GlobalCoor()) return false;
           usleep(100000);
@@ -251,6 +251,7 @@ bool Drone::MakeVerticalFlight(double FlightLen, PzG::LaczeDoGNUPlota& Link){
       Layout[2] -= 2;
     }
     else{
+      FlightLen = FlightLen + Layout[2];
       std::cout << "Opadanie ... " << std::endl;
       for(;Layout[2] >= FlightLen ; Layout[2] -= 2){
           if(!this->Count_Save_GlobalCoor()) return false;
@@ -426,22 +427,23 @@ const std::string& Drone::TakeFilename_FinalSolid() const{
  *   
  *   \param [in]  Obstacle - wskaznik wspoldzielony na obiekt sceny, z ktorym badana jest kolizyjnosc
  *
- *   \retval true  - wykryto kolizje
- *   \retval false - w przeciwnym wypadku 
+ *   \retval   0     - brak kolizji
+ *   \retval  -1     - wykryto kolizje
+ *   \retval  >0     - mozliwe ladowanie na podanej wysokosci (Plaskowyz)
  */
-bool  Drone::Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const{
+double  Drone::Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const{
   std::shared_ptr<Cuboid> tmp;
   std::shared_ptr<Drone>  tmp_Drone;
   Vector3D V;
   unsigned int error = 0;
-  if(Obstacle->ObjectType() != "Drone"){
+  if(Obstacle->ObjectType() != "Drone"  && Obstacle->ObjectType() != "Plaskowyz"){
     tmp = std::dynamic_pointer_cast<Cuboid>(Obstacle);
     if(tmp->Take_Aprox_Area(2)[0] <= Layout[0] && Layout[0] <= tmp->Take_Aprox_Area(1)[0] && tmp->Take_Aprox_Area(2)[1] <= Layout[1] && Layout[1] <= tmp->Take_Aprox_Area(1)[1])
-      return true;
-    else if(tmp->Take_Aprox_Area(2)[0] - Layout[0] > Radius || Layout[0] - tmp->Take_Aprox_Area(0)[0] > Radius  )
-      return false;
+      return -1;
+    else if(tmp->Take_Aprox_Area(2)[0] - Layout[0] > Radius || Layout[0] - tmp->Take_Aprox_Area(0)[0] > Radius)
+      return 0;
     else if(tmp->Take_Aprox_Area(0)[1] - Layout[1] > Radius || Layout[1] - tmp->Take_Aprox_Area(1)[1] > Radius)
-      return false;
+      return 0;
     
     for( unsigned int Ind = 0; Ind < 4; ++Ind){
       V = tmp->Take_Aprox_Area(Ind) - Layout;
@@ -451,18 +453,43 @@ bool  Drone::Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const{
     }
     if( (Layout[0] > tmp->Take_Aprox_Area(0)[0]|| Layout[0] < tmp->Take_Aprox_Area(3)[0]) && (Layout[1] < tmp->Take_Aprox_Area(0)[1] || Layout[1] > tmp->Take_Aprox_Area(1)[1])){
       if(!error)
-        return false;
+        return 0;
     }
   }
-  else{
+  else if (Obstacle->ObjectType() == "Drone"){
     tmp_Drone = std::dynamic_pointer_cast<Drone>(Obstacle);
     V = tmp_Drone->TakeLayout() - Layout;
     V[2] = 0;
     if(tmp_Drone->TakeRadius() + Radius < V.lenght())
-      return false;
+      return 0;
   }
+  else{
+    tmp = std::dynamic_pointer_cast<Cuboid>(Obstacle);
+    if(tmp->Take_Aprox_Area(2)[0] <= Layout[0] && Layout[0] <= tmp->Take_Aprox_Area(1)[0] && tmp->Take_Aprox_Area(2)[1] <= Layout[1] && Layout[1] <= tmp->Take_Aprox_Area(1)[1]){
+      if(fabs(tmp->Take_Aprox_Area(2)[0] - Layout[0]) > Radius && fabs(Layout[0] - tmp->Take_Aprox_Area(0)[0]) > Radius && fabs(tmp->Take_Aprox_Area(0)[1] - Layout[1]) > Radius && fabs(Layout[1] - tmp->Take_Aprox_Area(1)[1]) > Radius)
+        return tmp->Take_Height();
+      else
+        return -1;
+    }
+    else{
+      if(tmp->Take_Aprox_Area(2)[0] - Layout[0] > Radius || Layout[0] - tmp->Take_Aprox_Area(0)[0] > Radius)
+      return 0;
+      else if(tmp->Take_Aprox_Area(0)[1] - Layout[1] > Radius || Layout[1] - tmp->Take_Aprox_Area(1)[1] > Radius)
+      return 0;
+    }
+    for( unsigned int Ind = 0; Ind < 4; ++Ind){
+      V = tmp->Take_Aprox_Area(Ind) - Layout;
+      V[2] = 0;
+      if(V.lenght() < Radius)
+        ++error;
+    }
+    if( (Layout[0] > tmp->Take_Aprox_Area(0)[0]|| Layout[0] < tmp->Take_Aprox_Area(3)[0]) && (Layout[1] < tmp->Take_Aprox_Area(0)[1] || Layout[1] > tmp->Take_Aprox_Area(1)[1])){
+      if(!error)
+        return 0;
+    }
 
-  return true;
+  }
+  return -1;
 }
 
 

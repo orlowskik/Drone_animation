@@ -20,6 +20,6 @@ class SceneObject{
         /*!
         *   \brief Metoda wirtualna badania kolizyjnosci
         */
-        virtual bool  Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const = 0;
+        virtual double  Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const = 0;
 
 };

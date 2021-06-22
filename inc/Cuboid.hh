@@ -34,9 +34,15 @@ class Cuboid: public Solid{
         */
         double OrientAngle;
         /*!
+        *   \brief Wysokosc
+        */
+        double Height;
+        /*!
         *   \brief Rzut na plaszczyzne OXY
         */
         Vector3D Aprox_area[4];
+
+
 
     public:
 
@@ -62,6 +68,14 @@ class Cuboid: public Solid{
         */
         double Take_OrientAngle() const {return OrientAngle;};
         /*!
+        *   \brief Metoda odpowiadajaca za dostep wysokosci
+        */
+        double Take_Height() const {return Height;};
+        /*!
+        *   \brief Metoda odpowiadajaca za dostep wysokosci
+        */
+        double& Take_Height() {return Height;};
+        /*!
         *   \brief Metoda odpowiadajaca za modyfikacje wektorow rzutu
         */
         Vector3D& Take_Aprox_Area(unsigned int Ind) {return Aprox_area[Ind];};
@@ -77,4 +91,6 @@ class Cuboid: public Solid{
         *   \brief Metoda wirtualna odpowiadajaca za zwracanie wektora polozenia
         */
         virtual const Vector3D& Take() const override {return Layout;}
+
+
 };

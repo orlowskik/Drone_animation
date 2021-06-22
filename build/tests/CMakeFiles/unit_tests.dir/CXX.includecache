@@ -27,6 +27,8 @@ iostream
 -
 unistd.h
 -
+cmath
+-
 
 ../inc/GeometricSolid.hh
 iostream

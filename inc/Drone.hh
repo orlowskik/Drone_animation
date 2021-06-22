@@ -8,6 +8,7 @@
 #include <fstream>
 #include <iostream>
 #include <unistd.h>
+#include <cmath>
 
 
 
@@ -138,6 +139,6 @@ class Drone: public SceneObject{
         /*!
         *   \brief Metoda wirtualna odpowiadajaca za sprawdzanie kolizji
         */
-        virtual bool  Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const override;
+        virtual double  Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const override;
 
 };

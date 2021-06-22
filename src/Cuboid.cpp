@@ -9,6 +9,7 @@ Cuboid::Cuboid():
     for(unsigned int i = 0; i < 4; ++i){
         Aprox_area[i] = {0,0,0};
     };
+    Height = 0;
 }
 
 

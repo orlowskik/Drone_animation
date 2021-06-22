@@ -72,7 +72,7 @@ class Solid: public SceneObject{
         /*!
         *   \brief Metoda wirtualna badajaca kolizyjnosc
         */
-        virtual bool  Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const override;
+        virtual double  Check_Collision(std::shared_ptr<SceneObject>&Obstacle) const override;
 
 };
 

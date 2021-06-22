@@ -408,7 +408,7 @@ TEST_CASE("Test wykrywania kolizji - na lewo od gory"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -428,7 +428,7 @@ TEST_CASE("Test wykrywania kolizji - na prawo od gory"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone());
 }
 
 
@@ -448,7 +448,7 @@ TEST_CASE("Test wykrywania kolizji - na lewo od gory (kolizja) "){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -467,7 +467,7 @@ TEST_CASE("Test wykrywania kolizji - na prawo od gory (kolizja)"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -486,7 +486,7 @@ TEST_CASE("Test wykrywania kolizji - w srodku gory"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -505,7 +505,7 @@ TEST_CASE("Test wykrywania kolizji - powyzej gory"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -524,7 +524,7 @@ TEST_CASE("Test wykrywania kolizji - ponizej gory"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -543,7 +543,7 @@ TEST_CASE("Test wykrywania kolizji - powyzej gory (kolizja)"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -562,7 +562,7 @@ TEST_CASE("Test wykrywania kolizji - ponizej gory (kolizja)"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -581,7 +581,7 @@ TEST_CASE("Test wykrywania kolizji - lewy gorny rog"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -601,7 +601,7 @@ TEST_CASE("Test wykrywania kolizji - prawy gorny rog"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -620,7 +620,7 @@ TEST_CASE("Test wykrywania kolizji - lewy dolny rog"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -640,7 +640,7 @@ TEST_CASE("Test wykrywania kolizji - prawy dolny rog"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -660,7 +660,7 @@ TEST_CASE("Test wykrywania kolizji - rog (kolizja)"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -680,7 +680,7 @@ TEST_CASE("Test wykrywania kolizji - rog (kolizja)"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -699,7 +699,7 @@ TEST_CASE("Test wykrywania kolizji - na lewo od gory"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -719,7 +719,7 @@ TEST_CASE("Test wykrywania kolizji - na prawo od gory"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -739,7 +739,7 @@ TEST_CASE("Test wykrywania kolizji - na lewo od gory (kolizja) "){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -758,7 +758,7 @@ TEST_CASE("Test wykrywania kolizji - na prawo od gory (kolizja)"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -777,7 +777,7 @@ TEST_CASE("Test wykrywania kolizji - w srodku gory"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -796,7 +796,7 @@ TEST_CASE("Test wykrywania kolizji - powyzej gory"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -815,7 +815,7 @@ TEST_CASE("Test wykrywania kolizji - ponizej gory"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -834,7 +834,7 @@ TEST_CASE("Test wykrywania kolizji - powyzej gory (kolizja)"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -853,7 +853,7 @@ TEST_CASE("Test wykrywania kolizji - ponizej gory (kolizja)"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -872,7 +872,7 @@ TEST_CASE("Test wykrywania kolizji - lewy gorny rog"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -892,7 +892,7 @@ TEST_CASE("Test wykrywania kolizji - prawy gorny rog"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -911,7 +911,7 @@ TEST_CASE("Test wykrywania kolizji - lewy dolny rog"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -931,7 +931,7 @@ TEST_CASE("Test wykrywania kolizji - prawy dolny rog"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -951,7 +951,7 @@ TEST_CASE("Test wykrywania kolizji - rog (kolizja)"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -971,7 +971,7 @@ TEST_CASE("Test wykrywania kolizji - rog (kolizja)"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -990,9 +990,8 @@ TEST_CASE("Test wykrywania kolizji - na lewo od gory"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
-
 
 
 TEST_CASE("Test wykrywania kolizji - na prawo od gory"){
@@ -1010,7 +1009,7 @@ TEST_CASE("Test wykrywania kolizji - na prawo od gory"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -1030,7 +1029,7 @@ TEST_CASE("Test wykrywania kolizji - na lewo od gory (kolizja) "){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -1049,7 +1048,7 @@ TEST_CASE("Test wykrywania kolizji - na prawo od gory (kolizja)"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -1068,7 +1067,7 @@ TEST_CASE("Test wykrywania kolizji - w srodku gory"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -1087,7 +1086,7 @@ TEST_CASE("Test wykrywania kolizji - powyzej gory"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -1106,7 +1105,7 @@ TEST_CASE("Test wykrywania kolizji - ponizej gory"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -1125,7 +1124,7 @@ TEST_CASE("Test wykrywania kolizji - powyzej gory (kolizja)"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -1144,7 +1143,7 @@ TEST_CASE("Test wykrywania kolizji - ponizej gory (kolizja)"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -1163,7 +1162,7 @@ TEST_CASE("Test wykrywania kolizji - lewy gorny rog"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -1183,7 +1182,7 @@ TEST_CASE("Test wykrywania kolizji - prawy gorny rog"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -1202,7 +1201,7 @@ TEST_CASE("Test wykrywania kolizji - lewy dolny rog"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -1222,7 +1221,7 @@ TEST_CASE("Test wykrywania kolizji - prawy dolny rog"){
     Scene.AddObject(P1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -1242,7 +1241,7 @@ TEST_CASE("Test wykrywania kolizji - rog (kolizja)"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -1262,7 +1261,7 @@ TEST_CASE("Test wykrywania kolizji - rog (kolizja)"){
     Scene.AddObject(P1);
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -1284,7 +1283,7 @@ TEST_CASE("Test wykrywania kolizji - dwa drony bez kolizji"){
     
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -1308,7 +1307,7 @@ TEST_CASE("Test wykrywania kolizji - dwa drony na sobie"){
     
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -1331,7 +1330,7 @@ TEST_CASE("Test wykrywania kolizji - dwa drony kolizja"){
     
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -1355,7 +1354,7 @@ TEST_CASE("Test wykrywania kolizji - dwa drony po przekatnych"){
     
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 
@@ -1378,7 +1377,7 @@ TEST_CASE("Test wykrywania kolizji - dwa drony kolizja"){
     
 
 
-    CHECK( !Scene.Check_Landing_Zone() );
+    CHECK( Scene.Check_Landing_Zone() );
 }
 
 
@@ -1397,7 +1396,7 @@ TEST_CASE("Test wykrywania kolizji - brak kolizyjnosci ze soba"){
     Scene.AddObject(TestDrone1);
 
 
-    CHECK( Scene.Check_Landing_Zone() );
+    CHECK( !Scene.Check_Landing_Zone() );
 }
 
 

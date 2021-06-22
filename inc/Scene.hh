@@ -96,7 +96,7 @@ class Scene{
        /*!
         *   \brief Metoda sprawdzajaca mozliwosc ladowania
         */
-       bool Check_Landing_Zone();
+       double Check_Landing_Zone();
        /*!
         *   \brief Metoda lotu
         */

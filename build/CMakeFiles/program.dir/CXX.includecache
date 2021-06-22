@@ -27,6 +27,8 @@ iostream
 -
 unistd.h
 -
+cmath
+-
 
 ../inc/GeometricSolid.hh
 iostream
@@ -53,12 +55,6 @@ Matrix.hh
 ../inc/Prism6.hh
 GeometricSolid.hh
 ../inc/GeometricSolid.hh
-
-../inc/Scene.hh
-Drone.hh
-../inc/Drone.hh
-SceneObject.hh
-../inc/SceneObject.hh
 
 ../inc/SceneObject.hh
 memory
@@ -90,7 +86,7 @@ list
 vector
 -
 
-/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/src/Scene.cpp
-Scene.hh
-/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/src/Scene.hh
+/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/src/Drone.cpp
+Drone.hh
+/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/src/Drone.hh
 

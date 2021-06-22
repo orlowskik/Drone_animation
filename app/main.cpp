@@ -181,8 +181,11 @@ int main() {
                 // 2 Przeszkoda
                 Scene.Fly(90,80,FLIGHTHEIHGT,TracePoints);
                 
-                // 3 i 4 Przeszkoda
-                Scene.Fly(125,85,FLIGHTHEIHGT,TracePoints);
+                // Ladowanie na plaskowyzu
+                Scene.Fly(110,85,FLIGHTHEIHGT,TracePoints);
+
+                // 3 Przeszkoda
+                Scene.Fly(0,50,80,TracePoints); 
 
                 std::cout << "Polozenie Drona aktywnego (x,y): " << Scene.TakeActiveDrone()->TakeLayout()[0] << "  "<<Scene.TakeActiveDrone()->TakeLayout()[1] << std::endl;
                 std::cout << "Aktualna ilosc obiektow Vector: " << Layout.show_active_vectors() << std::endl;

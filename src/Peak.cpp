@@ -81,6 +81,8 @@ bool Peak::Count_Save_GlobalCoor(){
                 this->Take_Aprox_Area(number_of_points) = tmp;
                 ++number_of_points;
             }
+            if(tmp[2] > Take_Height())
+                this->Take_Height() = tmp[2];
             File_Final << tmp <<std::endl;
             File_Template >> tmp;
 
