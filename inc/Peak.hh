@@ -3,7 +3,21 @@
 #include "Cuboid.hh"
 #include <fstream>
 
+/*!
+ * \file
+ * \brief Klasa opisujaca Gore z ostrym szczytem
+ *
+ * Klasa opisujaca gore z ostrym szczytem
+ */
 
+
+/*!
+ * \brief Klasa opisujaca gore z ostrym szczytem
+ *
+ *  Klasa opisuje pojecie gory z ostrym sczytem w przestrzeni.
+ *  Jest to klasa dziedziczaca po klasie Cuboid w trybie 
+ *  publicznym. Tworzy figure na bazie deformacji prostopadloscianu.
+ */
 class Peak: public Cuboid{
     private:
 

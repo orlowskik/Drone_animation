@@ -1,0 +1,19 @@
+<map id="Scene::Redraw" name="Scene::Redraw">
+<area shape="rect" id="node1" title="Metoda dodajaca pliki do rysowania na scenie." alt="" coords="5,292,124,319"/>
+<area shape="rect" id="node2" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a34bd48f57c0fd69c12bf4127a1cacd8f" title="Dodaje nazwę pliku." alt="" coords="449,6,622,47"/>
+<area shape="rect" id="node4" href="$class_scene.html#acd95083dc8cbc1ff25a5397ca441b179" title="Metoda dodajaca pliki dronow do rysowania na scenie." alt="" coords="209,69,351,96"/>
+<area shape="rect" id="node8" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a200ce6bdb980c314a9eafe49e8f2dd5e" title="Inicjalizuje połączenie z programem gnuplot." alt="" coords="193,121,367,162"/>
+<area shape="rect" id="node9" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a065f5b8402737cc62b0ad4f66d028335" title=" " alt="" coords="193,186,367,227"/>
+<area shape="rect" id="node10" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a94d8527fd78048ed6cb32ffb29e5f903" title="Ustawia rotację wokół osi OX i OZ." alt="" coords="193,251,367,293"/>
+<area shape="rect" id="node13" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a9c91987dfc869d6fcea96205c581daef" title="Ustawia zakres osi OX." alt="" coords="193,317,367,358"/>
+<area shape="rect" id="node14" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a54c6e9cf9ab2eae479451fd953c2717c" title="Ustawia zakres osi OY." alt="" coords="193,382,367,423"/>
+<area shape="rect" id="node15" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a1dbbb2b86fb13b8632e6bad9df2a82e3" title="Ustawia zakres osi OZ." alt="" coords="193,447,367,489"/>
+<area shape="rect" id="node16" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a89a1d90d017d264cd26398464d074073" title="Kasuje zawartość listy nazw plików." alt="" coords="172,513,388,554"/>
+<area shape="rect" id="node17" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a10950349b348fd3a3d4143e95337527c" title="Zmienia tryb rysowania." alt="" coords="193,578,367,619"/>
+<area shape="rect" id="node3" href="$namespace_pz_g.html#ae1ae4d36f66c77879380ba73da8e20e3" title=" " alt="" coords="695,13,821,40"/>
+<area shape="rect" id="node5" href="$class_drone.html#af3224e3b7b4884460738fe192f2dac32" title="Metoda udostepniajaca sciezke do pliku prostopadlosianu." alt="" coords="436,72,635,99"/>
+<area shape="rect" id="node7" href="$class_drone.html#ae3a363fd39a546dda3742b28427565cd" title="Metoda udostepniajaca sciezke do pliku graniastoslupa." alt="" coords="456,123,615,165"/>
+<area shape="rect" id="node6" href="$class_solid.html#ad505305edd057147ccc6c0fb174996c1" title="Metoda wirtualna zwracajaca sciezke do pliku z docelowa bryla." alt="" coords="683,94,833,135"/>
+<area shape="rect" id="node11" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a88324c53a70846fb6bc9d918ce21fd56" title="Ustawia rotację wokół osi OX." alt="" coords="449,221,622,262"/>
+<area shape="rect" id="node12" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a458399aa2a8f4b3f00ccd5b272857ea1" title="Ustawia rotację wokół osi OZ." alt="" coords="449,286,622,327"/>
+</map>

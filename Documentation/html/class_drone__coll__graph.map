@@ -1,0 +1,8 @@
+<map id="Drone" name="Drone">
+<area shape="rect" id="node1" title="Klasa opisujaca drona." alt="" coords="166,276,227,303"/>
+<area shape="rect" id="node2" href="$class_scene_object.html" title="Klasa abstrakcyjna opisujaca obiekty sceny." alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node5" href="$class_solid.html" title="Klasa opisujaca bryle geometryczna." alt="" coords="171,96,225,123"/>
+<area shape="rect" id="node3" href="$class_vector.html" title=" " alt="" coords="140,5,293,32"/>
+<area shape="rect" id="node4" href="$class_cuboid.html" title="Klasa opisujaca prostopadloscian." alt="" coords="203,187,270,213"/>
+<area shape="rect" id="node6" href="$class_prism.html" title="Klasa opisujaca graniastoslup o podstawie szesciokatnej." alt="" coords="121,187,179,213"/>
+</map>

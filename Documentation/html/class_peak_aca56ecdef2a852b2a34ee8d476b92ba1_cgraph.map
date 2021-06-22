@@ -1,0 +1,10 @@
+<map id="Peak::Count_Save_GlobalCoor" name="Peak::Count_Save_GlobalCoor">
+<area shape="rect" id="node1" title="Metoda znieksztalcajaca prostopadloscian i zapisujaca dane do pliku." alt="" coords="5,115,224,141"/>
+<area shape="rect" id="node2" href="$class_cuboid.html#a13541df432969bbb08e98dad5f40e42a" title="Metoda odpowiadajaca za modyfikacje wektorow rzutu." alt="" coords="281,5,467,32"/>
+<area shape="rect" id="node3" href="$class_cuboid.html#aa553e523ae9888e77cb74dfead51cdfb" title="Metoda odpowiadajaca za dostep wysokosci." alt="" coords="297,56,451,83"/>
+<area shape="rect" id="node4" href="$class_solid.html#ad505305edd057147ccc6c0fb174996c1" title="Metoda wirtualna zwracajaca sciezke do pliku z docelowa bryla." alt="" coords="299,107,449,149"/>
+<area shape="rect" id="node5" href="$class_solid.html#a845f3e314cf6ed5f9125cac11382a43e" title="Metoda zwracajaca sciezke do pliku wzorcowego." alt="" coords="299,173,449,214"/>
+<area shape="rect" id="node6" href="$class_cuboid.html#a08bc443badc04b38cb947ee573c534b9" title="Metoda przechodzaca z ukladu lokalnego bryly do ukladu lokalnego zespolu (drona)" alt="" coords="272,238,476,279"/>
+<area shape="rect" id="node7" href="$_matrix3x3_8hh.html#aeb565d68db2c7ec1fd693b1af088732b" title="Funkcja tworzaca macierz obrotu." alt="" coords="524,220,645,247"/>
+<area shape="rect" id="node8" href="$class_solid.html#a76b8df098d571113383b1a6fcc12b44b" title="Metoda skalujaca wektor." alt="" coords="536,271,633,297"/>
+</map>

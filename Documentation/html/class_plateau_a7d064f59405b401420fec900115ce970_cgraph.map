@@ -1,0 +1,11 @@
+<map id="Plateau::Plateau" name="Plateau::Plateau">
+<area shape="rect" id="node1" title="Konstruktor parametryczny." alt="" coords="5,115,133,141"/>
+<area shape="rect" id="node2" href="$class_plateau.html#a3d7c1f4c6e688097aa7cb38e8f89d928" title="Metoda znieksztalcajaca prostopadloscian i zapisujaca dane do pliku." alt="" coords="181,107,337,149"/>
+<area shape="rect" id="node3" href="$class_cuboid.html#a13541df432969bbb08e98dad5f40e42a" title="Metoda odpowiadajaca za modyfikacje wektorow rzutu." alt="" coords="394,5,581,32"/>
+<area shape="rect" id="node4" href="$class_cuboid.html#aa553e523ae9888e77cb74dfead51cdfb" title="Metoda odpowiadajaca za dostep wysokosci." alt="" coords="410,56,565,83"/>
+<area shape="rect" id="node5" href="$class_solid.html#ad505305edd057147ccc6c0fb174996c1" title="Metoda wirtualna zwracajaca sciezke do pliku z docelowa bryla." alt="" coords="412,107,563,149"/>
+<area shape="rect" id="node6" href="$class_solid.html#a845f3e314cf6ed5f9125cac11382a43e" title="Metoda zwracajaca sciezke do pliku wzorcowego." alt="" coords="412,173,563,214"/>
+<area shape="rect" id="node7" href="$class_cuboid.html#a08bc443badc04b38cb947ee573c534b9" title="Metoda przechodzaca z ukladu lokalnego bryly do ukladu lokalnego zespolu (drona)" alt="" coords="385,238,589,279"/>
+<area shape="rect" id="node8" href="$_matrix3x3_8hh.html#aeb565d68db2c7ec1fd693b1af088732b" title="Funkcja tworzaca macierz obrotu." alt="" coords="637,220,759,247"/>
+<area shape="rect" id="node9" href="$class_solid.html#a76b8df098d571113383b1a6fcc12b44b" title="Metoda skalujaca wektor." alt="" coords="649,271,747,297"/>
+</map>

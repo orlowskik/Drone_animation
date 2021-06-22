@@ -1,0 +1,6 @@
+<map id="Scene::Check_Landing_Zone" name="Scene::Check_Landing_Zone">
+<area shape="rect" id="node1" title="Metoda sprawdzajaca mozliwosc ladowania." alt="" coords="251,31,457,57"/>
+<area shape="rect" id="node2" href="$class_scene.html#a52fc6b447039db77ecfd5d6425ddd80e" title="Metoda lotu." alt="" coords="111,5,200,32"/>
+<area shape="rect" id="node4" href="$tests_2main_8cpp.html#ad4e45a6938a6e235178521ce8fd478d1" title=" " alt="" coords="108,56,203,83"/>
+<area shape="rect" id="node3" href="$app_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>

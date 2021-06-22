@@ -3,7 +3,21 @@
 #include "Cuboid.hh"
 #include <fstream>
 
+/*!
+ * \file
+ * \brief Klasa opisujaca Plaskowyz
+ *
+ * Klasa opisujaca plaskowyz
+ */
 
+
+/*!
+ * \brief Klasa opisujaca plaskowyz
+ *
+ *  Klasa opisuje pojecie plaskowyzu w przestrzeni.
+ *  Jest to klasa dziedziczaca po klasie Cuboid w trybie 
+ *  publicznym. Tworzy figure na bazie deformacji prostopadloscianu.
+ */
 class Plateau: public Cuboid{
 
 

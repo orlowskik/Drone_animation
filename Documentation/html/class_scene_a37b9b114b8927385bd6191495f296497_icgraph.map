@@ -1,0 +1,6 @@
+<map id="Scene::AddDrone" name="Scene::AddDrone">
+<area shape="rect" id="node1" title="Metoda dodajaca drona do sceny." alt="" coords="332,31,465,57"/>
+<area shape="rect" id="node2" href="$class_scene.html#a615217e0eb72a980d06ceb8e38ab456a" title="Metoda dodajaca objekt." alt="" coords="148,31,284,57"/>
+<area shape="rect" id="node3" href="$app_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="25,5,80,32"/>
+<area shape="rect" id="node4" href="$tests_2main_8cpp.html#ad4e45a6938a6e235178521ce8fd478d1" title=" " alt="" coords="5,56,100,83"/>
+</map>

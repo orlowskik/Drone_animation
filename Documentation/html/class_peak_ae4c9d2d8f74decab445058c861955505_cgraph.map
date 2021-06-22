@@ -1,0 +1,11 @@
+<map id="Peak::Peak" name="Peak::Peak">
+<area shape="rect" id="node1" title="Konstruktor parametryczny." alt="" coords="5,115,100,141"/>
+<area shape="rect" id="node2" href="$class_peak.html#aca56ecdef2a852b2a34ee8d476b92ba1" title="Metoda znieksztalcajaca prostopadloscian i zapisujaca dane do pliku." alt="" coords="148,115,367,141"/>
+<area shape="rect" id="node3" href="$class_cuboid.html#a13541df432969bbb08e98dad5f40e42a" title="Metoda odpowiadajaca za modyfikacje wektorow rzutu." alt="" coords="423,5,610,32"/>
+<area shape="rect" id="node4" href="$class_cuboid.html#aa553e523ae9888e77cb74dfead51cdfb" title="Metoda odpowiadajaca za dostep wysokosci." alt="" coords="439,56,594,83"/>
+<area shape="rect" id="node5" href="$class_solid.html#ad505305edd057147ccc6c0fb174996c1" title="Metoda wirtualna zwracajaca sciezke do pliku z docelowa bryla." alt="" coords="441,107,592,149"/>
+<area shape="rect" id="node6" href="$class_solid.html#a845f3e314cf6ed5f9125cac11382a43e" title="Metoda zwracajaca sciezke do pliku wzorcowego." alt="" coords="441,173,592,214"/>
+<area shape="rect" id="node7" href="$class_cuboid.html#a08bc443badc04b38cb947ee573c534b9" title="Metoda przechodzaca z ukladu lokalnego bryly do ukladu lokalnego zespolu (drona)" alt="" coords="415,238,619,279"/>
+<area shape="rect" id="node8" href="$_matrix3x3_8hh.html#aeb565d68db2c7ec1fd693b1af088732b" title="Funkcja tworzaca macierz obrotu." alt="" coords="667,220,788,247"/>
+<area shape="rect" id="node9" href="$class_solid.html#a76b8df098d571113383b1a6fcc12b44b" title="Metoda skalujaca wektor." alt="" coords="679,271,776,297"/>
+</map>

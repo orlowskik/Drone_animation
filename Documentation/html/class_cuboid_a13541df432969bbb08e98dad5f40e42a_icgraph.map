@@ -1,0 +1,9 @@
+<map id="Cuboid::Take_Aprox_Area" name="Cuboid::Take_Aprox_Area">
+<area shape="rect" id="node1" title="Metoda odpowiadajaca za modyfikacje wektorow rzutu." alt="" coords="452,71,639,98"/>
+<area shape="rect" id="node2" href="$class_plateau.html#a3d7c1f4c6e688097aa7cb38e8f89d928" title="Metoda znieksztalcajaca prostopadloscian i zapisujaca dane do pliku." alt="" coords="215,5,371,47"/>
+<area shape="rect" id="node4" href="$class_slope.html#a95ae71464931ec3dbfaa8a9cb79f6aee" title="Metoda znieksztalcajaca prostopadloscian i zapisujaca dane do pliku." alt="" coords="181,71,404,98"/>
+<area shape="rect" id="node6" href="$class_peak.html#aca56ecdef2a852b2a34ee8d476b92ba1" title="Metoda znieksztalcajaca prostopadloscian i zapisujaca dane do pliku." alt="" coords="183,122,402,149"/>
+<area shape="rect" id="node3" href="$class_plateau.html#a7d064f59405b401420fec900115ce970" title="Konstruktor parametryczny." alt="" coords="5,13,133,39"/>
+<area shape="rect" id="node5" href="$class_slope.html#a7feb98241e01aa1922b87834127b4fbc" title="Konstruktor parametryczny." alt="" coords="18,71,121,98"/>
+<area shape="rect" id="node7" href="$class_peak.html#ae4c9d2d8f74decab445058c861955505" title="Konstruktor parametryczny." alt="" coords="22,122,117,149"/>
+</map>

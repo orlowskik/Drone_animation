@@ -1,0 +1,8 @@
+<map id="Scene::DrawDrone" name="Scene::DrawDrone">
+<area shape="rect" id="node1" title="Metoda dodajaca pliki dronow do rysowania na scenie." alt="" coords="513,31,656,57"/>
+<area shape="rect" id="node2" href="$class_scene.html#a37b9b114b8927385bd6191495f296497" title="Metoda dodajaca drona do sceny." alt="" coords="332,5,465,32"/>
+<area shape="rect" id="node6" href="$class_scene.html#a7c922a7b7531f80859892aca469bd41c" title="Metoda dodajaca pliki do rysowania na scenie." alt="" coords="157,56,275,83"/>
+<area shape="rect" id="node3" href="$class_scene.html#a615217e0eb72a980d06ceb8e38ab456a" title="Metoda dodajaca objekt." alt="" coords="148,5,284,32"/>
+<area shape="rect" id="node4" href="$app_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="25,56,80,83"/>
+<area shape="rect" id="node5" href="$tests_2main_8cpp.html#ad4e45a6938a6e235178521ce8fd478d1" title=" " alt="" coords="5,5,100,32"/>
+</map>

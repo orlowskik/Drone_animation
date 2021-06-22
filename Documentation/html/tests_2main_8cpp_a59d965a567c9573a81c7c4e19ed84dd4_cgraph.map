@@ -1,0 +1,12 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node1" title=" " alt="" coords="5,66,100,93"/>
+<area shape="rect" id="node2" href="$class_scene.html#a615217e0eb72a980d06ceb8e38ab456a" title="Metoda dodajaca objekt." alt="" coords="183,41,319,67"/>
+<area shape="rect" id="node10" href="$class_scene.html#a29d136eae46ebece7252603825cee0b9" title="Metoda sprawdzajaca mozliwosc ladowania." alt="" coords="148,91,355,118"/>
+<area shape="rect" id="node3" href="$class_scene.html#a37b9b114b8927385bd6191495f296497" title="Metoda dodajaca drona do sceny." alt="" coords="403,66,536,93"/>
+<area shape="rect" id="node5" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a34bd48f57c0fd69c12bf4127a1cacd8f" title="Dodaje nazwę pliku." alt="" coords="787,5,961,47"/>
+<area shape="rect" id="node4" href="$class_scene.html#acd95083dc8cbc1ff25a5397ca441b179" title="Metoda dodajaca pliki dronow do rysowania na scenie." alt="" coords="584,67,727,94"/>
+<area shape="rect" id="node7" href="$class_drone.html#af3224e3b7b4884460738fe192f2dac32" title="Metoda udostepniajaca sciezke do pliku prostopadlosianu." alt="" coords="775,71,973,98"/>
+<area shape="rect" id="node9" href="$class_drone.html#ae3a363fd39a546dda3742b28427565cd" title="Metoda udostepniajaca sciezke do pliku graniastoslupa." alt="" coords="795,123,953,164"/>
+<area shape="rect" id="node6" href="$namespace_pz_g.html#ae1ae4d36f66c77879380ba73da8e20e3" title=" " alt="" coords="1033,13,1160,39"/>
+<area shape="rect" id="node8" href="$class_solid.html#ad505305edd057147ccc6c0fb174996c1" title="Metoda wirtualna zwracajaca sciezke do pliku z docelowa bryla." alt="" coords="1021,93,1172,135"/>
+</map>

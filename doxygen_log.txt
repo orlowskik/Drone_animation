@@ -1,0 +1,21 @@
+warning: The selected output language "polish" has not been updated
+since release 1.8.2.  As a result some sentences may appear in English.
+
+/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/CMakeLists.txt:94: warning: Reached end of file while still inside a (nested) comment. Nesting level 1 (probable line reference: 58)
+/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/inc/Vector.hh:104: warning: no matching class member found for 
+  template 
+  Vector::Vector(const std::initializer_list &SizeList)
+Possible candidates:
+  'Vector::Vector()'
+  'Vector::Vector(const std::initializer_list &SizeList)'
+  'Vector::Vector(const Vector &V)'
+
+/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/inc/Scene.hh:59: warning: The following parameter of Scene::Scene(std::vector> &DroneContener, std::list> &ObjectList, std::string Filename, PzG::LaczeDoGNUPlota &Link_2) is not documented:
+  parameter 'ObjectList'
+/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/src/Scene.cpp:111: warning: argument 'Drone' of command @param is not found in the argument list of Scene::AddObject(std::shared_ptr NewObject)
+/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/inc/Scene.hh:79: warning: The following parameter of Scene::AddObject(std::shared_ptr NewObject) is not documented:
+  parameter 'NewObject'
+error: md5 hash does not match for two different runs of /home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/Documentation/html/classdoctest_1_1_string_a607c6977b193fecf29622110e6081625_icgraph.dot !
+/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/src/lacze_do_gnuplota.cpp:273: warning: unable to resolve link to 'LaczeDoGNUPlota::DodajNazwe' for \link command
+/home/kamil/Pulpit/po/rep1/zad5_3-Orlowski-K/inc/lacze_do_gnuplota.hh:619: warning: unable to resolve link to 'LaczeDoGNUPlota::DodajNazwe' for \link command
+*** Doxygen has finished
